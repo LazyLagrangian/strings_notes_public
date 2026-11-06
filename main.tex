@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper,oneside]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{newpxmath}
+\usepackage{dsfont}
+\usepackage[margin=2.8cm]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\graphicspath{{figures/}}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[skins,breakable]{tcolorbox}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\hypersetup{pdftitle={Introduction to String Theory, Part II: String compactifications},
+  pdfsubject={Lecture notes on the module of Prof. Michele Cicoli, University of Bologna, 2026/27}}
+
+\newif\ifdarktitle \darktitletrue
+\definecolor{titlebg}{HTML}{140A22}
+\definecolor{titlerule}{HTML}{FF9433}
+\ifdarktitle
+  \definecolor{titlesub}{HTML}{DCCFEA}\newcommand{\titleart}{fig_title-art-dark}
+\else
+  \definecolor{titlesub}{HTML}{4A4D55}\newcommand{\titleart}{fig_title-art}
+\fi
+
+\newenvironment{addition}%
+  {\begin{tcolorbox}[enhanced jigsaw, breakable, sharp corners,
+      colback=white, colframe=gray, boxrule=0.5pt,
+      left=6pt, right=6pt, top=4pt, bottom=4pt, before skip=1.5ex, after skip=1.5ex,
+      fontupper=\small,
+      before upper={\clubpenalties 3 10000 10000 0 \widowpenalties 3 10000 10000 0 }]%
+   \noindent}%
+  {\end{tcolorbox}}
+
+\numberwithin{equation}{chapter}
+\newcommand{\lecturedate}[1]{%
+  \vspace*{-1.5ex}{\noindent\large\itshape #1\par}\vspace{2ex}}
+\newcommand{\question}[1]{%
+  \par\medskip\noindent\textbf{Question.}\ \textit{#1}\par\nopagebreak\smallskip}
+
+\input{macros}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}%
+\begin{titlepage}
+  \ifdarktitle
+    \AddToHookNext{shipout/background}{%
+      \put(0pt,-\paperheight){\textcolor{titlebg}{\rule{\paperwidth}{\paperheight}}}}%
+    \color{white}%
+  \fi
+  \centering
+  \vspace*{\stretch{1}}
+  \includegraphics[width=0.74\textwidth]{\titleart}
+  \vspace{5ex}
+  {\Huge\bfseries Introduction to String Theory\par}
+  \vspace{2ex}
+  {\color{titlerule}\rule{0.18\textwidth}{0.8pt}\par}
+  \vspace{2ex}
+  {\LARGE\color{titlesub} Part II: String compactifications\par}
+  \vspace{4ex}
+  {\large\color{titlesub} Lecture notes on the module of Prof.\ Michele Cicoli\par}
+  \vspace{1ex}
+  {\large\color{titlesub} University of Bologna, academic year 2026/27\par}
+  \vspace*{\stretch{1.6}}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\tableofcontents
+
+\input{conventions}
+
+\input{lectures/lecture01_2026-11-05}
+\input{lectures/lecture02_2026-11-06}
+
+\renewcommand{\bibname}{References}
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{References}
+
+\bibitem{IbanezUranga}
+L.~E. Ibáñez and A.~M. Uranga, \emph{String Theory and Particle Physics: An Introduction to String Phenomenology}, Cambridge University Press, 2012.
+
+\bibitem{Hebecker}
+A.~Hebecker, \emph{Naturalness, String Landscape and Multiverse}, Lecture Notes in Physics 979, Springer, 2021, \texttt{arXiv:2008.10625}.
+
+\bibitem{BKLS}
+R.~Blumenhagen, B.~Körs, D.~Lüst and S.~Stieberger, \emph{Four-dimensional string compactifications with D-branes, orientifolds and fluxes}, Phys.\ Rept.\ \textbf{445} (2007) 1, \texttt{hep-th/0610327}.
+
+\bibitem{Louis}
+J.~Louis, lecture notes on string theory and string compactifications, available on the author's website (University of Hamburg).
+
+\bibitem{BaumannMcAllister}
+D.~Baumann and L.~McAllister, \emph{Inflation and String Theory}, Cambridge University Press, 2015, \texttt{arXiv:1404.2601}.
+
+\bibitem{CicoliReview}
+M.~Cicoli, J.~P. Conlon, A.~Maharana, S.~Parameswaran, F.~Quevedo and I.~Zavala, \emph{String cosmology: from the early universe to today}, \texttt{arXiv:2303.04819}.
+
+\bibitem{Polchinski}
+J.~Polchinski, \emph{String Theory}, Vols.~I and~II, Cambridge University Press, 1998.
+
+\bibitem{Tong}
+D.~Tong, \emph{Lectures on String Theory}, \texttt{arXiv:0908.0333}.
+
+\bibitem{CHSW}
+P.~Candelas, G.~T. Horowitz, A.~Strominger and E.~Witten, \emph{Vacuum configurations for superstrings}, Nucl.\ Phys.\ B \textbf{258} (1985) 46.
+
+\bibitem{BBHL}
+K.~Becker, M.~Becker, M.~Haack and J.~Louis, \emph{Supersymmetry breaking and $\alpha'$-corrections to flux induced potentials}, JHEP \textbf{06} (2002) 060, \texttt{hep-th/0204254}.
+
+\bibitem{GrimmLouis}
+T.~W. Grimm and J.~Louis, \emph{The effective action of type IIB Calabi--Yau orientifolds}, Nucl.\ Phys.\ B \textbf{699} (2004) 387, \texttt{hep-th/0403067}.
+
+\bibitem{KreuzerSkarke}
+M.~Kreuzer and H.~Skarke, \emph{Complete classification of reflexive polyhedra in four dimensions}, Adv.\ Theor.\ Math.\ Phys.\ \textbf{4} (2000) 1209, \texttt{hep-th/0002240}.
+
+\bibitem{Planck2018}
+Planck Collaboration, N.~Aghanim et al., \emph{Planck 2018 results. VI. Cosmological parameters}, Astron.\ Astrophys.\ \textbf{641} (2020) A6, \texttt{arXiv:1807.06209}.
+
+\bibitem{EotWash}
+J.~G. Lee, E.~G. Adelberger, T.~S. Cook, S.~M. Fleischer and B.~R. Heckel, \emph{New test of the gravitational $1/r^2$ law at separations down to $52\,\mu$m}, Phys.\ Rev.\ Lett.\ \textbf{124} (2020) 101101, \texttt{arXiv:2002.11761}.
+
+\end{thebibliography}
+
+\end{document}

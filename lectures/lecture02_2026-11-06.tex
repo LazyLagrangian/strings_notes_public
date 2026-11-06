@@ -1,0 +1,385 @@
+\chapter{String phenomenology: from the heterotic string to the moduli problem}
+\label{ch:L2}
+\lecturedate{Lecture of 6 November 2026}
+
+This lecture continues the general description, begun in \cref{ch:L1}, of how string theory can be connected with the real world. Like the first one it is mostly made of words; the equations will come in the following lectures. It has three parts. The first explains why we look for compactifications that preserve four-dimensional $\mathcal N=1$ supersymmetry at the Kaluza--Klein scale. The second surveys the five superstring theories in ten dimensions, the dualities that relate them and their massless spectra, and uses them to explain why string phenomenology started with the heterotic string and why it later moved to type II theories. The third introduces a problem that every string compactification has to face, and around which much of this course is organised: the \emph{moduli}, massless scalar fields that parametrise the size and the shape of the extra dimensions, and the need to stabilise them.
+
+\section{Why four-dimensional \texorpdfstring{$\mathcal N=1$}{N=1} supersymmetry}
+\label{sec:L2-N1}
+
+Recall the chain of effective theories of \cref{sec:L1-hierarchy} (\cref{fig:L1-scales}). We start from type IIB string theory, a theory of closed strings, and go to energies below the string scale, integrating out all the massive string modes. What is left is a ten-dimensional field theory, type IIB supergravity, whose field content is the massless spectrum of the string. We then go below the Kaluza--Klein scale. A massless field in ten dimensions looks, from the four-dimensional point of view, like a massless field plus a tower of Kaluza--Klein states (\cref{sec:L1-KK}), and integrating out the tower we are left with four-dimensional fields only. The result is a four-dimensional supergravity theory, whose number of supersymmetries depends on the topology of the internal space $Y_6$ (\cref{sec:L1-holonomy}). We pick Calabi--Yau manifolds, which we shall define properly from the mathematical point of view, because they break the largest amount of supersymmetry while preserving some of it, and, after the orientifold projection, lead to $\mathcal N=1$ supersymmetry at the Kaluza--Klein scale.
+
+One could also consider compactifications that break supersymmetry completely, so that the theory at the Kaluza--Klein scale has $\mathcal N=0$, and try to do model building directly there. We do not. We focus on string compactifications with four-dimensional $\mathcal N=1$ supersymmetry at the Kaluza--Klein scale, for four reasons.
+
+The first is that $\mathcal N=1$ is the only chiral version of four-dimensional supersymmetry: in theories with $\mathcal N\ge2$ the fermions come in non-chiral representations (\cref{sec:L1-holonomy}). With $\mathcal N=1$ there is hope of obtaining the Standard Model, which is a chiral theory.
+
+The second concerns the scale of supersymmetry breaking. We do not know the Kaluza--Klein scale. It could be at the edge of detection, close to the TeV scale, but more realistically it is very high, say $10^{14}$--$10^{15}\GeV$. The $\mathcal N=1$ supersymmetry that survives there should then be broken spontaneously at much lower energies, for example at the TeV scale, to address the hierarchy problem. It should also be broken \emph{dynamically}: the hope is that this happens through non-perturbative effects, as in confinement, which naturally generate scales exponentially smaller than the fundamental ones (see the addition at the end of \cref{sec:L2-heterotic}). Supersymmetry broken at low energies has the good properties met in the supersymmetry course: it addresses the hierarchy problem, it provides a dark matter candidate, it leads to radiative electroweak symmetry breaking, in which the electroweak symmetry is broken dynamically by loop corrections, and it makes the gauge couplings unify. The hope is to recover all of these from a top-down approach. Whether this works is a property of the effective theory: one has to derive it from string theory, compute the non-perturbative effects, and check whether they indeed break the remaining $\mathcal N=1$ at low energies. It might also turn out that this is never possible.
+
+The third concerns how the breaking is communicated. Besides knowing whether supersymmetry is broken at low energies, one must understand how the breaking is mediated to the \emph{visible sector}, the supersymmetric version of the Standard Model, for instance the minimal supersymmetric Standard Model (MSSM). Some other sector of the compactification is responsible for breaking supersymmetry, and it must couple to the MSSM in such a way that the MSSM feels the breaking and the supersymmetric partners become massive. The breaking felt by the MSSM must be \emph{soft}, so that the cancellation of quadratic divergences survives, and soft supersymmetry breaking is generated naturally in supergravity theories derived from string theory, through gravitational interactions. This is \emph{gravity mediation}.
+
+These three reasons are phenomenological. The fourth is theoretical, and we have not met it yet in the supersymmetry course: \emph{$\mathcal N=1$ supersymmetry allows one to control the quantum corrections to the effective theory.} A supersymmetric theory is specified by its Kähler potential $K$ and its superpotential $W$, and one can ask how these quantities behave under quantum corrections. Each of them has a tree-level part, loop corrections and non-perturbative corrections, but not on the same footing:
+\begin{equation}
+  K = K_{\text{tree}} + K_{\text{loops}} + K_{\text{np}} ,\qquad
+  W = W_{\text{tree}} + W_{\text{np}} .
+  \label{eq:L2-KW}
+\end{equation}
+The superpotential is exact at tree level in perturbation theory: it receives no loop corrections, as a consequence of supersymmetry and of the fact that it is a holomorphic quantity; the only corrections beyond tree level are non-perturbative. This will be proved in the supersymmetry course. It is a very powerful result: if one computes $W$ at tree level, one knows for sure that there are no loop corrections. The Kähler potential is different and does receive loop corrections. Since computing quantum corrections in string theory is extremely hard, this control is very important. In a compactification that breaks supersymmetry completely there is no such control, and it is much harder to compute the effective theory. Keeping some supersymmetry helps to compute the effective theory, but not too much of it: with $\mathcal N=1$ and not $\mathcal N=2$ the theory remains chiral and is still good for phenomenology. That is the balance.
+
+\begin{addition}
+\emph{Why $W$ is not renormalised.} The argument, due in this form to Seiberg, combines holomorphy with symmetries. Every coupling in $W$ can be promoted to the expectation value of a background chiral superfield, and $W$ must be a holomorphic function of the chiral superfields and of these background fields. In string compactifications the couplings are themselves the expectation values of moduli, and the imaginary parts of many moduli are axions: if $T = \tau + i b$, the field $b$ descends from a $p$-form gauge field (for instance from $C_4$ integrated over a four-cycle), and gauge invariance of the $p$-form gives it a shift symmetry $b\to b+c$ that holds to all orders in perturbation theory. A holomorphic $W$ can depend on $\tau$ only through $T$, hence also on $b$, and the shift symmetry forbids this: perturbatively $W$ cannot depend on $T$ at all. Non-perturbative effects (instantons, gaugino condensates) break the continuous shift symmetry to a discrete one and allow terms such as $W_{\text{np}}\propto e^{-aT}$, which are exponentially small at weak coupling or large volume. The Kähler potential is real and depends on $T + \bar T$, which the shift symmetry leaves invariant, so nothing protects it: it receives both string-loop and $\alpha'$ corrections, such as the $\alpha'^3$ correction mentioned in \cref{sec:L1-control}. The holomorphic gauge kinetic function, which sets the gauge couplings, is protected in the same way as $W$, except for a one-loop correction. The interplay between a protected $W$, generated non-perturbatively, and a corrected $K$ is the basis of the moduli-stabilisation scenarios studied later in the course.
+\end{addition}
+
+This control is absent in $\mathcal N=0$ compactifications, those that really break supersymmetry completely: one Majorana--Weyl spinor in ten dimensions then corresponds to no spinor at all in four dimensions, so a ten-dimensional supersymmetry generator gives nothing. An example is $Y_6 = S^6$, a six-dimensional sphere, whose holonomy group is $SU(4)$ in the lecture's words, to be compared with $SU(3)$ for a Calabi--Yau manifold.
+Why the holonomy group determines the number of four-dimensional supersymmetries was sketched in the addition at the end of \cref{sec:L1-holonomy}, and will be explained towards the end of the course.
+
+\question{A Calabi--Yau fourfold, used in F-theory to compactify from twelve dimensions to four, also has $SU(4)$ holonomy. Does that also give $\mathcal N=0$?}
+
+The Calabi--Yau fourfold does have $SU(4)$ holonomy; in general a Calabi--Yau $n$-fold has $SU(n)$ holonomy. But in that case the twelve-dimensional compactification is a fictitious construction: there is no twelve-dimensional theory. What one actually does is to start from eleven dimensions and compactify on the fourfold, which has eight real dimensions, down to $11-8=3$ dimensions. The fourfolds used for this have a fibre structure, with a two-torus as the fibre; roughly speaking, one can see them as a Calabi--Yau threefold with a two-torus attached. To recover four dimensions one sends the volume of the torus to zero. The torus has two circles, and in the limit one of the directions does not disappear but grows to infinite size, through the dualities of \cref{sec:L2-dualities}, and becomes the fourth direction of Minkowski space. What remains is a six-dimensional space of the Calabi--Yau type times four-dimensional Minkowski space, so that in the end one is again compactifying on a space of $SU(3)$ holonomy, a Calabi--Yau threefold. This is very advanced material, which we shall not need.
+
+\begin{addition}
+\emph{$SU(4)$ holonomy in six and in eight dimensions.} The common name $SU(4)$ hides two different situations, and the answer to the question is no: a Calabi--Yau fourfold preserves supersymmetry. On a generic oriented six-manifold, $S^6$ included, the holonomy is the whole $SO(6)$, and on spinors it acts as the whole of $\mathrm{Spin}(6)\simeq SU(4)$, under which the chiral spinor is the fundamental $\mathbf 4$ (\cref{eq:L1-spinor-decomp}). The $\mathbf 4$ contains no singlet, so there is no covariantly constant spinor and no supersymmetry survives. (The round $S^6$ is not Ricci-flat, so on its own it does not even solve the ten-dimensional vacuum equations; it serves only as an example of a space without invariant spinors.) For a Calabi--Yau fourfold, instead, $SU(4)$ is a proper subgroup of the rotation group $SO(8)$ of the eight-dimensional tangent space, on which it acts as $\mathbf 4\oplus\bar{\mathbf 4}$. The two chiral spinors of $SO(8)$ decompose as $\mathbf 8_s\to\mathbf 1\oplus\mathbf 1\oplus\mathbf 6$ and $\mathbf 8_c\to\mathbf 4\oplus\bar{\mathbf 4}$, so there are two invariant spinors. The $32$ supercharges of M-theory, $\mathbf{32}\to(\mathbf 2,\mathbf 8_s)\oplus(\mathbf 2,\mathbf 8_c)$ under $SO(1,2)\times SO(8)$, leave $2\times2 = 4$ real supercharges: three-dimensional $\mathcal N=2$, which is four-dimensional $\mathcal N=1$ reduced on a circle.
+
+The way back to four dimensions uses a duality: M-theory on a two-torus of area $A$ is equivalent to type IIB on a circle whose radius grows as $A$ shrinks, $R_{\mathrm{IIB}}\propto1/A$, with the type IIB axio-dilaton given by the complex structure of the torus (\cref{sec:L2-moduli}). Fibring the torus over a base $B_3$ and taking $A\to0$ gives type IIB on $\R^{1,3}\times B_3$, with an axio-dilaton that varies over $B_3$. This is F-theory, whose ``twelve dimensions'' are the ten of type IIB plus the two of the auxiliary torus.
+\end{addition}
+
+\section{Five superstring theories and their dualities}
+\label{sec:L2-dualities}
+
+Our starting point will be ten-dimensional type IIB string theory, because, as we shall try to explain, it is at present the most promising one for phenomenology. In the end the starting point does not matter much, since all string theories are related by dualities. What changes from one description to another is which quantities are easy to compute: something that looks weakly coupled, and so computable, in one description can look strongly coupled, and hard to compute, in another.
+
+At the moment there are five consistent perturbative superstring theories in ten dimensions, met in the first part of the course: type IIB, type IIA, type I, and the two heterotic theories, with gauge groups $SO(32)$ and $E_8\times E_8$. They are all related by dualities of two kinds. \emph{S-dualities} are strong--weak coupling dualities: they act on the dilaton, and exchange a theory at string coupling $g_s$ with one at coupling $1/g_s$. \emph{T-dualities} act instead on the geometry: they change the radius of the compactification manifold. The five theories are therefore best thought of not as different theories but as different limits, or better different perturbative corners, of a single, more fundamental theory, \emph{M-theory}. What we know of M-theory is its low-energy limit, eleven-dimensional supergravity. In it, the size of the eleventh dimension corresponds to the string coupling. In a perturbative corner, where the coupling goes to zero and perturbation theory can be used, the size of the eleventh dimension goes to zero, and one recovers a ten-dimensional theory; when the coupling becomes large, one starts to see the eleventh dimension.
+
+The simplest example is the relation between M-theory and type IIA. Compactified on a circle $S^1$ of radius $R$, going from eleven to ten dimensions, M-theory gives type IIA string theory, and $R$ is set by the dilaton in such a way that
+\begin{equation}
+  R\to0 \qquad\Longleftrightarrow\qquad g_s\to0 \qquad\text{(type IIA limit)} .
+  \label{eq:L2-IIA-limit}
+\end{equation}
+Type IIA is in turn T-dual to type IIB. T-duality changes the size of the compactification manifold: type IIA compactified on a circle of radius $R$ is the same theory as type IIB compactified on a circle of radius
+\begin{equation}
+  \tilde R = \frac{\alpha'}{R} = \frac{1}{4\pi^2\Ms^2R} .
+  \label{eq:L2-Tduality}
+\end{equation}
+The two are the same theory, with $R$ exchanged for $\alpha'/R$: an example of a duality. The whole web of dualities is shown in \cref{fig:L2-dualities}.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics{fig_L2-dualities}
+  \caption{The five ten-dimensional superstring theories and eleven-dimensional supergravity as limits of a single theory, M-theory, and the dualities that relate them.}\label{fig:L2-dualities}
+\end{figure}
+
+\begin{addition}
+\emph{The eleventh dimension, T-duality and the web.} The radius of the M-theory circle is related to the type IIA coupling by
+\begin{equation*}
+  R_{11} = g_s\sqrt{\alpha'} .
+\end{equation*}
+One way to see it is Witten's. Type IIA string theory contains D0-branes, point particles of mass $1/(g_s\sqrt{\alpha'})$, and bound states of $n$ of them, of mass $n/(g_s\sqrt{\alpha'})$. At strong coupling these become light, and they are precisely the tower of Kaluza--Klein momentum states $n/R_{11}$ of a circle of radius $R_{11} = g_s\sqrt{\alpha'}$: at strong coupling an eleventh dimension opens up, and the low-energy theory is eleven-dimensional supergravity. Its Planck length is $\ell_{11}\propto g_s^{1/3}\sqrt{\alpha'}$, so that $R_{11}/\ell_{11}\propto g_s^{2/3}$, up to numerical factors that depend on conventions: weak coupling means a circle that is small in eleven-dimensional Planck units.
+
+T-duality is a statement about the spectrum. A closed string on a circle of radius $R$ has quantised momentum $n/R$ and can wind $w$ times around the circle, which costs an energy $wR/\alpha'$, i.e.\ the tension $1/(2\pi\alpha')$ times the length $2\pi wR$; the masses in the remaining dimensions are $M^2 = (n/R)^2 + (wR/\alpha')^2 + {}$(oscillator contributions), with the level-matching condition relating $nw$ to the oscillators. This spectrum, and in fact the whole interacting theory, is invariant under $R\to\alpha'/R$ with $n\leftrightarrow w$, provided the string coupling also changes, $g_s\to g_s\sqrt{\alpha'}/R$, so that the lower-dimensional coupling is the same. In the superstring the transformation also reverses the chirality of the Ramond ground state of one side of the string, which turns type IIA into type IIB and vice versa. The self-dual radius is $R = \sqrt{\alpha'} = \ls/2\pi$.
+
+The rest of the web of \cref{fig:L2-dualities} is as follows. Type IIB is self-dual under S-duality, which acts on the combination $C_0 + ie^{-\phi}$ of the dilaton and the R--R scalar (\cref{sec:L2-spectra,sec:L2-moduli}) by $SL(2,\Z)$ transformations, and maps $g_s\to1/g_s$ when $C_0 = 0$. Type I, which is type IIB with the orientifold projection by worldsheet parity $\Omega_p$ (\cref{sec:L1-holonomy}), is S-dual to the $SO(32)$ heterotic string. The two heterotic theories are T-dual to each other on a circle, with a Wilson line for the gauge field. Finally, the $E_8\times E_8$ heterotic string at strong coupling is M-theory on an interval $S^1/\Z_2$, with one $E_8$ factor on each of its two boundaries (Hořava and Witten).
+\end{addition}
+
+\section{Massless spectra and the first string models}
+\label{sec:L2-spectra}
+
+Historically, the first attempts at string phenomenology, the research area that tries to obtain our real world from string theory, started around 1985, in the mid-1980s. String theory was born at the end of the 1960s and developed in the 1970s, and in the mid-1980s people started trying to connect it to the real world. Among the pioneers was Fernando Quevedo, the lecturer's PhD supervisor, who started his PhD in the mid-1980s with Steven Weinberg, the Weinberg who received the Nobel Prize for the electroweak theory at the heart of the Standard Model. When Quevedo asked him for a research project, Weinberg suggested trying to obtain the Standard Model from string theory, a sign of Weinberg's interest in these questions, even though the two never wrote a paper together. Many others started working on this in the same years.
+
+These initial attempts focused not on type IIB but on the $E_8\times E_8$ heterotic string, because type II theories did not seem to give rise to non-abelian gauge bosons in four dimensions. Looking at the spectrum of the type II theories, people did not see any non-abelian gauge bosons, which are needed for the Standard Model, and concluded that these theories, although consistent, were not good for the real world. The heterotic string, instead, has a gauge group in its massless spectrum, $E_8\times E_8$, and $E_8$ is a huge group which contains the Standard Model gauge group as a subgroup. The idea was to break one $E_8$ factor down to the Standard Model with a Higgs mechanism, while the dynamics of the second $E_8$ factor could be used to break supersymmetry. This programme turned out to be very hard, for reasons that will be stressed below, although people still work on heterotic phenomenology today. Then, around 1995, came the discovery of \emph{D-branes} as dynamical objects of string theory, and with it the realisation that the perturbations around a background containing D-branes, the open strings ending on them, can behave as non-abelian gauge bosons. D-branes are present in type II theories, so one had simply missed an ingredient: the non-abelian gauge bosons are absent from the closed-string spectrum, but they can come from the open-string spectrum. From 1995 onwards type II theories have been studied more than the heterotic string for phenomenology, even if there is still interest in heterotic constructions.
+
+To see why, let us summarise the massless spectra: we focus on the massless modes of the string and ask which ten-dimensional fields they correspond to in spacetime. They are listed in \cref{tab:L2-spectra} for type IIA, type IIB and the heterotic string.
+
+\begin{table}[tbp]
+  \centering
+  \renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{@{}llll@{}}
+    \toprule
+    Sector & Type IIA & Type IIB & Heterotic \\
+    \midrule
+    NS--NS & $G_{MN},\ B_{MN},\ \phi$ & $G_{MN},\ B_{MN},\ \phi$ & $G_{MN},\ B_{MN},\ \phi,\ A^a_M$ \\
+    R--R   & $C_1,\ C_3$ & $C_0,\ C_2,\ C_4$ & --- \\
+    NS--R  & $\psi^1_{M+},\ \lambda^1_-$ & $\psi^1_{M+},\ \lambda^1_-$ & $\psi_{M+},\ \lambda_-,\ \lambda^a_+$ \\
+    R--NS  & $\psi^2_{M-},\ \lambda^2_+$ & $\psi^2_{M+},\ \lambda^2_-$ & --- \\
+    \midrule
+    10D supersymmetry & $\mathcal N=2$, non-chiral & $\mathcal N=2$, chiral & $\mathcal N=1$, chiral \\
+    \bottomrule
+  \end{tabular}
+  \caption{Massless spectra of the type IIA, type IIB and heterotic superstrings in ten dimensions, sorted by sector: the first label refers to the left-movers, the second to the right-movers (for the heterotic string see the text). $G_{MN}$ is the metric, $B_{MN}$ the Kalb--Ramond two-form, $\phi$ the dilaton, $C_p$ the R--R $p$-forms, $\psi_M$ the gravitini, $\lambda$ the dilatini; $A^a_M$ and $\lambda^a$ are the heterotic gauge bosons and gaugini, $a = 1,\dots,\dim G = 496$, with $G = SO(32)$ or $E_8\times E_8$. The subscripts $\pm$ give the ten-dimensional chirality.}
+  \label{tab:L2-spectra}
+\end{table}
+
+The labels NS and R stand for Neveu--Schwarz and Ramond, and they are boundary conditions for the fermions on the worldsheet. The bosonic coordinates $X^M(\sigma)$ of a closed string must come back to themselves when one goes around the string, $\sigma\to\sigma+2\pi$. When the theory is supersymmetrised one must add worldsheet fermions $\psi^M$, and these can come back either to themselves or to minus themselves:
+\begin{equation}
+  \psi^M(\sigma+2\pi) = +\psi^M(\sigma)\quad\text{(Ramond)} ,\qquad
+  \psi^M(\sigma+2\pi) = -\psi^M(\sigma)\quad\text{(Neveu--Schwarz)} .
+  \label{eq:L2-NSR}
+\end{equation}
+On a closed string there are left-movers and right-movers, and the condition can be chosen independently for each. In type II theories there are worldsheet fermions for both, and so two spacetime supersymmetries, one coming from the left-movers and one from the right-movers; this is why they are called type II, and why all four combinations NS--NS, R--R, NS--R and R--NS appear. In the heterotic string there are worldsheet fermions only for the right-movers, and so only one spacetime supersymmetry. The left-movers have no worldsheet fermions at all: they are those of the bosonic string. Being bosonic, they produce only spacetime bosons, as an NS sector does, which is why the two heterotic sectors are labelled NS--NS and NS--R, according to the boundary condition of the right-movers.
+
+Now the fields. In the bosonic sector there are always the metric $G_{MN}$, the antisymmetric Kalb--Ramond two-form $B_{MN}$ and the dilaton $\phi$, in the NS--NS sector: this is the spectrum of any bosonic string theory. The difference in the heterotic string is that there are also gauge bosons $A^a_M$, ten-dimensional vectors (hence the index $M$, not $\mu$), and many of them: $a = 1,\dots,\dim G$, where the gauge group is $G = SO(32)$ or $G = E_8\times E_8$. These groups are huge: $\dim E_8 = 248$, so that both have dimension $496$. The $E$ stands for exceptional: $E_6$, $E_7$ and $E_8$ are the exceptional Lie groups, related to the octonions, the generalisation of the complex numbers and the quaternions. This is why people expected the heterotic string to work: with non-abelian gauge bosons in ten dimensions, the four-dimensional theory would inherit some of them.
+
+In the R--R sector type IIA has a one-form $C_1$ and a three-form $C_3$, and type IIB a zero-form $C_0$, a two-form $C_2$ and a four-form $C_4$. These are differential forms, i.e.\ antisymmetric tensors, such as $C_2\leftrightarrow C_{MN} = C_{[MN]}$ and $C_4\leftrightarrow C_{MNPQ} = C_{[MNPQ]}$, and $C_0$ is a pseudoscalar. They are all bosons. There are also higher forms, but they are dual to the ones listed: a $p$-form $C_p$ in ten dimensions is equivalent to an $(8-p)$-form, since the field strengths are related by $F_{p+1} = \star F_{9-p}$, and in type IIB the field strength of $C_4$ is self-dual, $F_5 = \star F_5$.
+
+The NS--R and R--NS sectors give fermions. There are two \emph{gravitini} $\psi_M$, of spin $3/2$: as we saw in the supersymmetry course, there are as many gravitini as supersymmetries, and type II theories have ten-dimensional $\mathcal N=2$. The subscripts $\pm$ give the ten-dimensional chirality: a spinor has definite chirality if it is an eigenstate of $\Gamma_{11} = \Gamma^0\Gamma^1\cdots\Gamma^9$, the ten-dimensional analogue of $\gamma_5$, with eigenvalue $\pm1$. There are also two \emph{dilatini} $\lambda$, of spin $1/2$, the supersymmetric partners of the dilaton. In type IIA the two gravitini have opposite chiralities, and so do the two dilatini: type IIA is a non-chiral theory in ten dimensions. In type IIB the two gravitini have the same chirality, and so do the two dilatini: type IIB is a chiral theory in ten dimensions (see also the conventions). The heterotic string has a single supersymmetry in ten dimensions, hence one gravitino and one dilatino, and in addition the supersymmetric partners of the gauge bosons, the \emph{gaugini} $\lambda^a$: it is ten-dimensional $\mathcal N=1$ supergravity coupled to super-Yang--Mills theory with gauge group $G$.
+
+\begin{addition}
+\emph{Where the table comes from.} In light-cone gauge the massless states of each side of the closed superstring, after the GSO projection, form a representation of the little group $SO(8)$. In the NS sector the massless state is $\psi^i_{-1/2}|0\rangle$, the vector $\mathbf 8_v$. In the R sector the periodic fermions have zero modes $\psi^M_0$ obeying a Clifford algebra, $\{\psi^M_0,\psi^N_0\} = \eta^{MN}$, so the ground state is a spacetime spinor, $\mathbf 8_s$ or $\mathbf 8_c$ depending on the GSO projection. This is why R--R states, products of two spinors, are bosons described by antisymmetric tensors, and why NS--R and R--NS states are fermions. The products are
+\begin{equation*}
+\begin{aligned}
+  &\text{NS--NS:} && \mathbf 8_v\otimes\mathbf 8_v = \mathbf 1\oplus\mathbf{28}\oplus\mathbf{35}_v &&(\phi,\ B_{MN},\ G_{MN}),\\
+  &\text{R--R, IIA:} && \mathbf 8_s\otimes\mathbf 8_c = \mathbf 8_v\oplus\mathbf{56}_v &&(C_1,\ C_3),\\
+  &\text{R--R, IIB:} && \mathbf 8_s\otimes\mathbf 8_s = \mathbf 1\oplus\mathbf{28}\oplus\mathbf{35}_+ &&(C_0,\ C_2,\ C_4 \text{ with } F_5 = \star F_5),\\
+  &\text{NS--R:} && \mathbf 8_v\otimes\mathbf 8_s = \mathbf 8_c\oplus\mathbf{56}_s &&(\lambda^1,\ \psi^1_M),
+\end{aligned}
+\end{equation*}
+and the R--NS sector gives $\mathbf 8_s\otimes\mathbf 8_v = \mathbf 8_c\oplus\mathbf{56}_s$ in type IIB and $\mathbf 8_c\otimes\mathbf 8_v = \mathbf 8_s\oplus\mathbf{56}_c$ in type IIA. Each gravitino comes with a dilatino of the opposite chirality; the two gravitini have the same chirality in type IIB and opposite chiralities in type IIA. Each sector has $64$ states, so there are $128$ bosons and $128$ fermions, the type II supergravity multiplet.
+
+In the heterotic string the right-movers give $\mathbf 8_v\oplus\mathbf 8_s$ as above. The left-movers are those of the bosonic string, in $26$ dimensions: $10$ of spacetime and $16$ compactified on a torus $\R^{16}/\Gamma_{16}$. Consistency (modular invariance) requires $\Gamma_{16}$ to be an even self-dual lattice, and in sixteen dimensions there are exactly two, the root lattice of $E_8\times E_8$ and the lattice of $\mathrm{Spin}(32)/\Z_2$. The massless left-moving states are $\alpha^i_{-1}|0\rangle$, an $\mathbf 8_v$, and $496$ singlets of $SO(8)$: the $16$ states $\alpha^I_{-1}|0\rangle$ of the internal bosons and the $480$ states $|p\rangle$ with $p\in\Gamma_{16}$, $p^2=2$. Together they form the adjoint representation of $G$, of dimension $16+480 = 496$. The product $(\mathbf 8_v\oplus\mathbf 8_s)\otimes\mathbf 8_v$ gives $G_{MN}$, $B_{MN}$, $\phi$, the gravitino in $\mathbf{56}_s$ and the dilatino in $\mathbf 8_c$; the product $(\mathbf 8_v\oplus\mathbf 8_s)\otimes\mathbf{496}$ gives the gauge bosons $A^a_M$ and the gaugini in $\mathbf 8_s$. The gaugini therefore have the chirality of the gravitino, opposite to that of the dilatino. Equivalently, in the supersymmetry transformations $\delta\phi\propto\bar\epsilon\lambda$ and $\delta A^a_M\propto\bar\epsilon\,\Gamma_M\lambda^a$ a Majorana--Weyl bilinear $\bar\epsilon\chi$ is non-zero only for opposite chiralities and $\bar\epsilon\,\Gamma_M\chi$ only for equal ones, so the dilatino has the chirality opposite to $\epsilon$, and the gaugini, like the gravitino, the same.
+\end{addition}
+
+\section{Gauge bosons in four dimensions}
+\label{sec:L2-vectors}
+
+The ten-dimensional gauge bosons of the heterotic string lead, in four dimensions, to four-dimensional gauge bosons: choosing the index $M=\mu$ and keeping the zero mode, constant along $Y_6$, one obtains $A^a_\mu(x)$, non-abelian gauge bosons that can give the gluons and the $W$ and $Z$ bosons of the Standard Model. In type IIA and type IIB this is not possible, and the reason is worth understanding, because it will come back in the discussion of moduli.
+
+A ten-dimensional two-form, an object with two indices, could give objects with one index in four dimensions. Taking for instance $M=\mu$ along $\R^{1,3}$ and $N=n$ along $Y_6$, the component $B_{\mu n}$ is, from the four-dimensional point of view, a vector labelled by $n$. To extract its massless modes one expands it in the zero modes of the internal Laplacian, which for an object with one internal index are the harmonic one-forms $\omega^I_n(y)$ of $Y_6$:
+\begin{equation}
+  B_{\mu n}(x,y) = \sum_I A^I_\mu(x)\,\omega^I_n(y) + \text{(massive Kaluza--Klein modes)} .
+  \label{eq:L2-Bmu}
+\end{equation}
+One is effectively reducing $B$ on one-cycles, one-dimensional submanifolds of the Calabi--Yau. But a Calabi--Yau manifold has no harmonic one-forms, $b_1(Y_6) = 0$, so these components vanish, and neither $G_{MN}$ nor $B_{MN}$ can give a vector $A_\mu(x)$ in four dimensions. We shall see later why this is a property of the Calabi--Yau.
+
+The R--R forms offer more possibilities. $C_1$ in type IIA is already a one-form, and gives a vector directly. A form with more indices gives a vector if it is reduced on a cycle with one dimension less than its degree: $C_3$ in type IIA reduced on a two-cycle ($3-2 = 1$), or $C_4$ in type IIB reduced on a three-cycle ($4-3=1$). In principle all of these behave in four dimensions as objects with one index.
+This does not work either, for a reason that is a property of the effective theory: the R--R forms do not couple to any massless mode of the string. One can obtain some kind of photons from these forms, but the photons of the Standard Model must couple to electrons, to leptons and quarks, and the R--R photons couple only to massive objects, with masses at or above the string scale, which cannot be ordinary leptons or quarks: the very massive D-branes that we shall meet later. Moreover they are abelian. So one can obtain photons from the closed-string spectrum of type IIA and type IIB, but they are not the photon of the Standard Model.
+
+\begin{addition}
+\emph{Why there are no harmonic one-forms, and how many R--R photons there are.} On a compact Ricci-flat manifold a harmonic one-form $\omega$ obeys the Weitzenböck identity $(\Delta\omega)_m = -\nabla^n\nabla_n\omega_m + R_m{}^n\omega_n$, whose last term vanishes. Contracting with $\omega^m$ and integrating by parts gives $\int_{Y_6}|\nabla\omega|^2 = 0$, so $\omega$ is covariantly constant (Bochner's argument). A covariantly constant vector is invariant under the holonomy group, but $SU(3)$ acts on the tangent space $\R^6\simeq\C^3$ as $\mathbf 3\oplus\bar{\mathbf 3}$, which contains no singlet. Hence $b_1 = 0$ for holonomy exactly $SU(3)$. The same argument shows that on a compact Ricci-flat manifold every Killing vector is covariantly constant, so a Calabi--Yau has no continuous isometries either, and the Kaluza--Klein vectors $G_{\mu m}$ of \cref{sec:L2-moduli} are absent too. The fundamental group of $Y_6$ is finite, but it can be non-trivial, as for the free quotients used in heterotic model building, where the non-contractible loops carry Wilson lines.
+
+Counting the R--R vectors uses the Hodge numbers of \cref{sec:L2-moduli}. In type IIA, $C_1$ gives one vector and $C_3$, expanded in the $h^{1,1}$ harmonic two-forms, gives $h^{1,1}$ more. In type IIB, $C_4$ expanded in the $b_3 = 2h^{2,1}+2$ harmonic three-forms gives $h^{2,1}+1$ vectors, half of the naive number, because $F_5$ is self-dual and the electric and magnetic components are not independent. In four-dimensional $\mathcal N=2$ language these are the graviphoton and the vectors of $h^{1,1}$ (IIA) or $h^{2,1}$ (IIB) vector multiplets, and the orientifold projection removes some of them. The charged objects are D-branes wrapped on cycles: D0-branes for $C_1$, D2-branes on two-cycles for $C_3$, D3-branes on three-cycles for $C_4$. A D$p$-brane has tension $T_p = 2\pi\Ms^{p+1}/g_s$ in our conventions, so a brane wrapped on a cycle of volume $\mathrm{vol}\,\ls^p$ is a particle of mass $2\pi\,\mathrm{vol}\,\Ms/g_s$, at or above the string scale in the regime $g_s\ll1$ of \cref{eq:L1-weak}.
+\end{addition}
+
+This is a very interesting prediction of string theory. On top of the ordinary photon there would be many other abelian gauge bosons, called \emph{dark photons}: dark because they do not couple to ordinary matter, but still present, and coupled to it gravitationally. All these massless dark photons would be around simply as a consequence of string theory, and the question is how to detect them. One way, on which the lecturer has worked, uses cosmology. Whether the dark photons are present in the universe depends on whether they were produced cosmologically. If they were, they behave in practice like neutrinos: they have spin one rather than spin one half, but, like neutrinos, they carry no charge, and they are relativistic, because they are massless. They behave as a dark relativistic species, dark because of their very feeble interactions with the Standard Model, effectively decoupled, like extra neutrinos. They would be an extra energy density in the universe, which would modify its expansion rate. By measuring the expansion rate one can then either discover that there is something more than the three neutrinos, or argue that there cannot be more, which would be a strong constraint on these models.
+
+\begin{addition}
+\emph{Dark radiation and $N_{\mathrm{eff}}$.} The energy density of relativistic species after electron--positron annihilation is conventionally written as
+\begin{equation*}
+  \rho_{\mathrm{rad}} = \Bigl[1 + \frac78\Bigl(\frac{4}{11}\Bigr)^{4/3}N_{\mathrm{eff}}\Bigr]\rho_\gamma ,
+\end{equation*}
+where $\rho_\gamma$ is the energy density of the photons and $N_{\mathrm{eff}}$ counts the neutrino-like species; the Standard Model predicts $N_{\mathrm{eff}}\simeq3.044$. Any additional dark radiation, such as relativistic dark photons (or the axions that we shall meet later), contributes $\Delta N_{\mathrm{eff}} = \frac87\bigl(\frac{11}{4}\bigr)^{4/3}\rho_{\mathrm{dark}}/\rho_\gamma$. It changes the expansion rate during Big Bang nucleosynthesis and at recombination, and so the primordial abundances and the anisotropies of the cosmic microwave background. The Planck satellite measured $N_{\mathrm{eff}} = 2.99\pm0.17$~\cite{Planck2018}, so present data allow $\Delta N_{\mathrm{eff}}$ of a few tenths at most. A massless vector with two polarisations in thermal equilibrium with the neutrinos would give $\Delta N_{\mathrm{eff}} = 8/7$ and is excluded; how much dark radiation a given compactification produces depends on how the dark sector is populated, for example by the decays of the moduli of \cref{sec:L2-moduli-problem}.
+\end{addition}
+
+\section{Heterotic model building}
+\label{sec:L2-heterotic}
+
+For these reasons, in the mid-1980s people focused on the $E_8\times E_8$ heterotic string. One $E_8$ factor is the \emph{visible sector}: a symmetry breaking (a Higgs mechanism) inside it brings it down to a grand unified theory (GUT). The relevant subgroups are
+\begin{equation}
+  E_8 \supset SO(10) \supset SU(5) \supset SU(3)\times SU(2)\times U(1) .
+  \label{eq:L2-E8-chain}
+\end{equation}
+$SO(10)$ and $SU(5)$ are the groups used for grand unification, and a Higgs mechanism, similar to the one that breaks $SU(2)_L\times U(1)_Y$ in the Standard Model, breaks $SU(5)$ down to $SU(3)\times SU(2)\times U(1)$. At the beginning there is a single group factor, so a single coupling: a unified theory with only one non-gravitational interaction, which then breaks down to the three interactions of the Standard Model.
+
+\begin{addition}
+\emph{The standard embedding and the number of generations.} In a heterotic compactification on a Calabi--Yau threefold the internal components $A^a_m$ of the gauge field cannot all vanish: the Bianchi identity of the three-form field strength, $\dd H = \frac{\alpha'}{4}\bigl(\tr R\wedge R - \Tr F\wedge F\bigr)$ in a common normalisation, requires a gauge background on $Y_6$ to compensate for the curvature. The simplest solution, the \emph{standard embedding} of Candelas, Horowitz, Strominger and Witten~\cite{CHSW}, identifies the gauge connection in an $SU(3)$ subgroup of one $E_8$ with the spin connection, whose holonomy is $SU(3)$. The unbroken group is the commutant of $SU(3)$ in $E_8$, i.e.\ $E_6$, a GUT group containing $SO(10)$: in four dimensions the chain \cref{eq:L2-E8-chain} starts as $E_8\supset E_6\supset SO(10)$, the first step being a breaking by the internal gauge background, which from the four-dimensional point of view acts like a Higgs mechanism. Under $SU(3)\times E_6$,
+\begin{equation*}
+  \mathbf{248} = (\mathbf 8,\mathbf 1)\oplus(\mathbf 1,\mathbf{78})\oplus(\mathbf 3,\mathbf{27})\oplus(\bar{\mathbf 3},\overline{\mathbf{27}}) ,
+\end{equation*}
+and the massless charged matter consists of $\mathbf{27}$'s and $\overline{\mathbf{27}}$'s, one of the Hodge numbers $h^{1,1}$, $h^{2,1}$ of \cref{sec:L2-moduli} counting each. The net number of chiral generations is therefore $|h^{1,1}-h^{2,1}| = |\chi(Y_6)|/2$, half the Euler characteristic: a topological number. Each $\mathbf{27}$ contains a full Standard Model family, since $\mathbf{27} = \mathbf{16}\oplus\mathbf{10}\oplus\mathbf 1$ under $SO(10)$. The quintic, with $\chi = -200$, gives $100$ generations; the first three-generation models used a free $\Z_3$ quotient of the Tian--Yau manifold, with $\chi = -6$, whose non-contractible loops carry Wilson lines that break $E_6$ further.
+\end{addition}
+
+The second $E_8$ factor is a \emph{hidden sector}. ``Hidden'' means that the Standard Model particles, leptons and quarks, do not feel its interactions, since they are not charged under it, and similarly there is matter charged under the hidden $E_8$ that is not charged under the Standard Model. The hidden sector is responsible for supersymmetry breaking. In it there is a dynamics very similar to confinement in QCD. In QCD the gauge coupling grows towards low energies and blows up, and quarks and antiquarks condense: the quark bilinear develops a non-zero vacuum expectation value, $\langle q\bar q\rangle\neq0$. Similarly, in the hidden $E_8$ there is strong dynamics at low energies, which gives a non-zero vacuum expectation value to some fields, and this breaks supersymmetry at low energies. Gravitational interactions, which are always present, then couple the hidden sector to the visible one and mediate the breaking to it, so that the visible sector also feels the breaking and becomes a non-supersymmetric Standard Model. That was the idea.
+
+\begin{addition}
+\emph{Gaugino condensation and gravity mediation.} The mechanism behind ``dynamically, via non-perturbative effects'' is dimensional transmutation. In an asymptotically free gauge theory with one-loop coefficient $b_0>0$, i.e.\ $\mu\,\dd g/\dd\mu = -b_0g^3/16\pi^2$, the coupling runs as
+\begin{equation*}
+  \frac{1}{g^2(\mu)} = \frac{1}{g^2(M)} - \frac{b_0}{8\pi^2}\ln\frac{M}{\mu} ,
+  \qquad\text{and blows up at}\qquad
+  \Lambda = M\,\exp\Bigl(-\frac{8\pi^2}{b_0\,g^2(M)}\Bigr) .
+\end{equation*}
+$\Lambda$ is not analytic in $g$ at $g=0$, so it is invisible at every order of perturbation theory, and it is naturally exponentially smaller than $M$: with $g^2(M)/4\pi = 1/25$ and $b_0 = 9$ (pure $\mathcal N=1$ super-Yang--Mills theory with gauge group $SU(3)$, $b_0 = 3N$), $\Lambda\simeq3\times10^{-8}M$. In a hidden sector without matter, pure super-Yang--Mills theory, there are no quarks, and the analogue of $\langle q\bar q\rangle$ is the gaugino bilinear, $\langle\lambda\lambda\rangle\sim\Lambda^3$: \emph{gaugino condensation}. In global supersymmetry the condensate alone does not break supersymmetry. In supergravity, however, the gauge coupling is the expectation value of a modulus (the dilaton, in the heterotic string), the condensate appears as a non-perturbative superpotential $W_{\mathrm{np}}\propto e^{-cf}$, with $f$ the gauge kinetic function and $c>0$ a constant fixed by the gauge group, of the type of \cref{eq:L2-KW}, and the resulting potential for the moduli can break supersymmetry through their F-terms. The order parameter is $F\sim\Lambda^3/\Mp$, and gravity mediation then gives soft masses in the visible sector of order the gravitino mass,
+\begin{equation*}
+  m_{\mathrm{soft}}\sim m_{3/2}\sim\frac{F}{\Mp}\sim\frac{\Lambda^3}{\Mp^2} ,
+\end{equation*}
+which is $1\TeV$ for $\Lambda\sim2\times10^{13}\GeV$. Non-perturbative superpotentials of this type will be a key ingredient of KKLT and of the Large Volume Scenario.
+\end{addition}
+
+\section{The problems of the heterotic string: the GUT coupling}
+\label{sec:L2-alphaGUT}
+
+The heterotic string, however, has problems, which still have to be fully addressed, and people are still working on them. The first concerns the gauge coupling. In a heterotic compactification that leads to a grand unified theory, based on $SO(10)$ or $SU(5)$, one can compute the coupling of the GUT, and one finds that it is controlled by the string coupling and by the volume of the Calabi--Yau manifold in string units (for now, take it for granted; see the addition below):
+\begin{equation}
+  \alpha_{\mathrm{GUT}} \equiv \frac{g_{\mathrm{GUT}}^2}{4\pi} \simeq \frac{g_s^2}{\Vol} .
+  \label{eq:L2-alphaGUT}
+\end{equation}
+Since our Einstein frame coincides with the string frame in the vacuum, $\Vol$ is the volume in either frame (see the conventions). From phenomenology, on the other hand, we know the value of $\alpha_{\mathrm{GUT}}$. The three non-gravitational couplings of the Standard Model, run with the renormalisation group of the MSSM, tend to unify at a value
+\begin{equation}
+  \alpha_{\mathrm{GUT}}^{-1}\simeq25 ,
+  \label{eq:L2-alphaGUT-value}
+\end{equation}
+as shown in \cref{fig:L2-unification}. This is the value needed for phenomenology.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics{fig_L2-unification}
+  \caption{Running of the three inverse gauge couplings of the Standard Model gauge group with the MSSM spectrum, at one loop. They meet at $\alpha^{-1}_{\mathrm{GUT}}\simeq 25$ at $M_{\mathrm{GUT}}\simeq2\times10^{16}\GeV$.}\label{fig:L2-unification}
+\end{figure}
+
+But then \cref{eq:L2-alphaGUT} requires
+\begin{equation}
+  \Vol \simeq 25\,g_s^2 ,
+  \label{eq:L2-V25}
+\end{equation}
+and this means that one cannot have $g_s\ll1$ and $\Vol\gg1$ at the same time. These were the two conditions, \cref{eq:L1-hierarchy-conditions}, to trust the effective theory. If one goes to the limit in which the string coupling is small, the volume becomes of order one or smaller, and there are very large higher-derivative ($\alpha'$) corrections to the effective theory. Vice versa, if one keeps the volume relatively large, so as to suppress the $\alpha'$ corrections, the string coupling is large, the loop corrections are large, and they can never be ignored. Either way it is hard to trust the effective theory. We shall see that this is not the case in type II theories. There the gauge fields live on D-branes, and the relation between the GUT coupling and the overall volume does not hold: the gauge coupling is set by the size of the cycle that the branes wrap, not by $\Vol$, so one can really go to large volume and small string coupling while keeping $\alpha_{\mathrm{GUT}}^{-1}\simeq25$.
+
+\begin{addition}
+\emph{The heterotic gauge coupling.} The heterotic gauge bosons are closed-string modes, so their kinetic term comes from the sphere, like the Einstein--Hilbert term of \cref{eq:L1-S10}, and it carries the same factor $e^{-2\phi}$:
+\begin{equation*}
+  S_{10}\supset\int\dd^{10}X\,\sqrt{-G}\;e^{-2\phi}\Bigl(\frac{1}{2\kappa_{10}^2}R_{10} - \frac{1}{4g_{10}^2}F^a_{MN}F^{aMN}\Bigr) ,
+\end{equation*}
+where the ratio $g_{10}^2/\kappa_{10}^2$ is a pure number times $1/\alpha'$, fixed by string theory ($g_{10}^2 = 4\kappa_{10}^2/\alpha'$ in the normalisation of Polchinski~\cite{Polchinski}). Reducing on $Y_6$ exactly as in \cref{eq:L1-reduction,eq:L1-vacuum}, the zero mode $A^a_\mu(x)$, constant on $Y_6$, has a four-dimensional kinetic term with
+\begin{equation*}
+  \frac{1}{g_{\mathrm{GUT}}^2} = \frac{e^{-2\phi_0}\,\mathrm{Vol}(Y_6)}{g_{10}^2} ,
+  \qquad\text{while}\qquad
+  \Mp^2 = \frac{e^{-2\phi_0}\,\mathrm{Vol}(Y_6)}{\kappa_{10}^2} .
+\end{equation*}
+Both are proportional to $\Vol/g_s^2$, which gives \cref{eq:L2-alphaGUT}, and their ratio does not depend on $g_s$ or $\Vol$ at all: $g_{\mathrm{GUT}}^2\Mp^2 = g_{10}^2/\kappa_{10}^2\propto1/\alpha'$. With \cref{eq:L1-MP-Ms} this says that
+\begin{equation*}
+  \alpha_{\mathrm{GUT}}\simeq\frac{g_s^2}{\Vol}\simeq4\pi\,\frac{\Ms^2}{\Mp^2} ,
+\end{equation*}
+where the second step is exact for $\alpha_{\mathrm{GUT}} = g_s^2/\Vol$, and the precise factor of order one depends on the normalisation of the gauge generators and, since the heterotic string has no D-branes to fix it, on that of $g_s$. In the heterotic string the string scale is therefore not free: for $\alpha_{\mathrm{GUT}}^{-1}\simeq25$, $\Ms\sim\Mp\sqrt{\alpha_{\mathrm{GUT}}/4\pi}\sim10^{17}\GeV$, an order of magnitude above the scale $M_{\mathrm{GUT}}\simeq2\times10^{16}\GeV$ at which the couplings of \cref{fig:L2-unification} meet. This mismatch is a long-standing puzzle of heterotic unification. Moreover \cref{eq:L2-V25} with $g_s\lesssim1$ gives $\Vol^{1/6}\lesssim25^{1/6}\approx1.7$, so that $\MKK = \Ms/\Vol^{1/6}$ is hardly below $\Ms$, and the window of ten-dimensional supergravity of \cref{fig:L1-scales} closes. Finally, in four-dimensional language the heterotic dilaton combines with the axion dual to $B_{\mu\nu}$ into a chiral field whose real part is proportional to $\Vol\,e^{-2\phi}$, and which is the gauge kinetic function: $\alpha_{\mathrm{GUT}}^{-1}$ is the expectation value of a modulus.
+\end{addition}
+
+\section{Moduli}
+\label{sec:L2-moduli}
+
+The second problem allows us to introduce a very important concept, which applies to every string theory, not only to the heterotic string: \emph{moduli stabilisation}. To explain what it means, consider the dimensional reduction of the ten-dimensional metric $G_{MN}(X)$ to four dimensions. Starting from one metric in ten dimensions, one obtains many scalars in four dimensions, which are called \emph{moduli}. Take, as in \cref{eq:L1-X10}, $X_{10} = \R^{1,3}\times Y_6$, with coordinates $x^\mu$, $\mu = 0,1,2,3$, on $\R^{1,3}$ and $y^m$, $m = 4,\dots,9$, on the Calabi--Yau manifold $Y_6$. The metric $G_{MN}(x,y)$ splits into three kinds of components:
+\begin{equation}
+  G_{MN}(x,y) \longrightarrow
+  \begin{cases}
+    G_{\mu\nu}(x) , \\[0.5ex]
+    G_{\mu m}(x,y) = \sum_I A^I_\mu(x)\,\omega^I_m(y) = 0 \quad\text{for a Calabi--Yau} , \\[0.5ex]
+    G_{mn}(x,y) = \sum_I \phi^I(x)\,\omega^I_{mn}(y) .
+  \end{cases}
+  \label{eq:L2-metric-split}
+\end{equation}
+The first, with both indices along $\R^{1,3}$, gives the four-dimensional metric once the dimensional reduction is done and the $y$-dependence is no longer seen. The mixed components $G_{\mu m}$ are, from the four-dimensional point of view, vectors. To find their zero modes, the massless ones, one expands in eigenstates of the internal Laplacian, here the harmonic one-forms $\omega^I_m(y)$, objects with one index in the extra dimensions, exactly as for $B_{\mu n}$ in \cref{eq:L2-Bmu}. For a Calabi--Yau there are none: the harmonic one-forms are related to one-cycles, and the one-cycles of a Calabi--Yau can all be shrunk to zero (more precisely, $b_1 = 0$, \cref{sec:L2-vectors}). So the metric never gives vectors.
+
+The internal components $G_{mn}$ are, from the four-dimensional point of view, scalars, since $m$ and $n$ are just labels. They can be expanded similarly, as a sum over scalar fields $\phi^I(x)$ times objects $\omega^I_{mn}(y)$ with two indices in the extra dimensions. How many terms the sum has depends on how many such objects can be defined on $Y_6$, which is a topological property of $Y_6$, and in practice the index $I$ takes hundreds of different values. A metric in ten dimensions therefore gives a metric in four dimensions plus many, many scalars. These scalars parametrise the internal metric: moving around in the space of the scalar fields changes the metric of $Y_6$. Some of the deformations change the size of the Calabi--Yau and others its shape, as anticipated at the end of \cref{sec:L1-questions}. Mathematicians call parameters of this kind, scalar parameters on which the metric of the Calabi--Yau depends, moduli. From the point of view of physics they are scalar fields: a nice relation between physics and mathematics. One of them, for instance, is the volume $\Vol$ that appeared in $\alpha_{\mathrm{GUT}}$, \cref{eq:L2-alphaGUT}. As a field, $\Vol(x)$ is a function on Minkowski space, and its geometric meaning is that the Calabi--Yau attached at the point $x$ can have a different volume from the one attached at another point.
+
+There are, in general, three types of moduli.
+
+\emph{Kähler moduli.} The first type parametrises deformations of the size of $Y_6$; an example is the volume. They are denoted
+\begin{equation}
+  T_i(x) ,\qquad i = 1,\dots,h^{1,1}(Y_6) ,
+  \label{eq:L2-T}
+\end{equation}
+where $h^{1,1}$, a \emph{Hodge number}, is the number of linearly independent harmonic $(1,1)$-forms on $Y_6$: a topological property. A form $\omega$ is harmonic if the Laplacian of $Y_6$ annihilates it, $\Delta\omega = 0$. The name $(1,1)$ comes from the fact that $Y_6$ is a complex manifold. On a complex manifold one can use holomorphic and antiholomorphic coordinates $z^i$ and $\bar z^{\bar\imath}$, as one can describe the plane either with the coordinates $(x,y)$ or, as the complex plane, with $(z,\bar z)$. A $(1,1)$-form has two indices, one holomorphic and one antiholomorphic, $\omega_{i\bar\jmath}\,\dd z^i\wedge\dd\bar z^{\bar\jmath}$, and in general a $(p,q)$-form has $p$ holomorphic and $q$ antiholomorphic indices.
+
+\emph{Complex-structure moduli.} The second type changes the complex structure of $Y_6$, i.e.\ how complex coordinates are assigned to it. Without changing the volume, these deformations change the shape of $Y_6$. They are denoted
+\begin{equation}
+  U_a(x) ,\qquad a = 1,\dots,h^{2,1}(Y_6) ,
+  \label{eq:L2-U}
+\end{equation}
+where the Hodge number $h^{2,1}$, another large number, counts the linearly independent harmonic $(2,1)$-forms on $Y_6$: it is the dimension of the space of such forms. Even if the construction cannot yet be fully appreciated, its beauty is that these mathematical, topological properties of $Y_6$ correspond, from the point of view of physics, to new scalar fields in four dimensions.
+
+\emph{The axio-dilaton.} The third type comes not from the metric but from the other scalars of the massless spectrum of type IIB, \cref{tab:L2-spectra}: the dilaton $\phi$ and the R--R zero-form $C_0$, a scalar since it has no index. They combine into a complex scalar, the \emph{axio-dilaton}
+\begin{equation}
+  S = e^{-\phi} + i\,C_0 .
+  \label{eq:L2-S}
+\end{equation}
+All the moduli turn out to be complex: $T_i$ and $U_a$, like $S$, are complex scalar fields. The real part of $S$ is $e^{-\phi}$, so by \cref{eq:L1-gs} its expectation value is the inverse string coupling,
+\begin{equation}
+  \langle\mathrm{Re}\,S\rangle = \frac{1}{g_s} \gg 1 ,
+  \label{eq:L2-ReS}
+\end{equation}
+which must be large for the effective theory to be trusted.
+
+For an arbitrary Calabi--Yau manifold, both $h^{1,1}(Y_6)$ and $h^{2,1}(Y_6)$ can be of order $100$. Starting from one metric in ten dimensions one can thus obtain hundreds of scalars in four dimensions. Calabi--Yau manifolds are named after Eugenio Calabi, an Italian-born mathematician, who conjectured their existence, and Shing-Tung Yau, a Chinese-born mathematician, who proved it; mathematicians together with theoretical physicists then started building explicit examples.
+Their number is still not known. The largest dataset built so far, that of Kreuzer and Skarke~\cite{KreuzerSkarke}, has about half a billion examples, $473\,800\,776$ (it lists the four-dimensional reflexive polytopes, each of which defines Calabi--Yau threefolds as hypersurfaces in a toric variety), and each of them is a good string compactification. There are examples in which both Hodge numbers are small, for instance with $h^{1,1} = 1$ and $h^{2,1}$ also small, which give only a few scalars, but most examples have many. From the point of view of the compactification they are all equally good.
+
+\begin{addition}
+\emph{The moduli of a Calabi--Yau metric.} The expansion of $G_{mn}$ in \cref{eq:L2-metric-split} can be made precise. On a Calabi--Yau threefold the deformations $\delta g_{mn}$ that preserve Ricci-flatness split into two kinds. Those of mixed type, $\delta g_{i\bar\jmath}$, give the harmonic $(1,1)$-forms $i\,\delta g_{i\bar\jmath}\,\dd z^i\wedge\dd\bar z^{\bar\jmath}$; they deform the Kähler form $J = i\,g_{i\bar\jmath}\,\dd z^i\wedge\dd\bar z^{\bar\jmath}$, and there are $h^{1,1}$ real ones. Those of pure type, $\delta g_{\bar\imath\bar\jmath}$, are related to the harmonic $(2,1)$-forms $\chi$ by contraction with the holomorphic three-form $\Omega$, $\delta g_{\bar\imath\bar\jmath}\propto\bar\Omega_{\bar\imath}{}^{kl}\chi_{kl\bar\jmath}$; they deform the complex structure, and there are $h^{2,1}$ complex ones. In total the metric has $h^{1,1}+2h^{2,1}$ real moduli. Expanding the Kähler form in a basis $\omega_i$ of harmonic $(1,1)$-forms, $J = \sum_{i=1}^{h^{1,1}}t^i\omega_i$ (in units of $\ls^2$), the $t^i$ measure the volumes of two-cycles, and the volume of $Y_6$ is the cubic polynomial
+\begin{equation*}
+  \Vol = \frac{1}{3!}\int_{Y_6}J\wedge J\wedge J = \frac16\,\kappa_{ijk}\,t^it^jt^k ,
+  \qquad
+  \kappa_{ijk} = \int_{Y_6}\omega_i\wedge\omega_j\wedge\omega_k ,
+\end{equation*}
+with the triple intersection numbers $\kappa_{ijk}$ of $Y_6$; the volumes of the four-cycles are $\tau_i = \partial\Vol/\partial t^i = \frac12\kappa_{ijk}t^jt^k$. The complex partners of these real fields come from the $p$-forms of \cref{tab:L2-spectra} expanded in the same harmonic forms; in the type IIB orientifolds studied later the Kähler moduli turn out to be $T_i = \tau_i + i\int_{D_i}C_4$, with $D_i$ the four-cycles. Which moduli survive the orientifold projection will be seen then.
+
+The Hodge numbers of a Calabi--Yau threefold with holonomy exactly $SU(3)$ are summarised by its Hodge diamond, whose entries $h^{p,q}$, $0\le p,q\le3$, are
+\begin{equation*}
+  \begin{array}{ccccccc}
+     & & & 1 & & & \\
+     & & 0 & & 0 & & \\
+     & 0 & & h^{1,1} & & 0 & \\
+    1 & & h^{2,1} & & h^{2,1} & & 1 \\
+     & 0 & & h^{1,1} & & 0 & \\
+     & & 0 & & 0 & & \\
+     & & & 1 & & &
+  \end{array}
+\end{equation*}
+The Betti numbers are sums along its rows: $b_1 = 0$, $b_2 = h^{1,1}$ and $b_3 = 2+2h^{2,1}$, and the Euler characteristic is $\chi = 2(h^{1,1}-h^{2,1})$. The quintic hypersurface in $\mathbb{P}^4$ has $h^{1,1} = 1$ and $h^{2,1} = 101$. Mirror symmetry pairs Calabi--Yau manifolds with $h^{1,1}$ and $h^{2,1}$ exchanged.
+
+Finally, the reason why all these fields are massless at leading order is Yau's theorem (\cref{sec:L1-holonomy}): for every choice of complex structure and of Kähler class there is a Ricci-flat metric. The ten-dimensional vacuum equations are therefore solved for every value of the moduli, there is a continuous family of solutions, and no potential for the moduli is generated at this level.
+\end{addition}
+
+\section{The moduli problem}
+\label{sec:L2-moduli-problem}
+
+What happens to the physics if there are all these scalars in four dimensions? The answer is that the moduli mediate new interactions. The moduli come from the dimensional reduction of the metric, so they couple to ordinary matter as the metric does: since in ten dimensions they are the metric, they couple gravitationally to everything. This also explains why we have not seen them yet: they carry no charge under the Standard Model gauge group, so they do not feel QCD, electromagnetism or the weak interactions. They are scalars which are around and which interact only gravitationally with the other particles. But then the way we see the gravitational interaction between two massive particles is through the exchange of a graviton, and on top of it there can be the exchange of any of these scalars: a fermion can emit a modulus through a gravitational vertex, and the modulus can be absorbed by another fermion. This is a new gravitational interaction on top of the Newtonian one, and it modifies Newton's law of gravity.
+
+How can this be avoided? One has to check experimentally down to which distances between two masses the inverse-square law $1/r^2$ of Newton has been verified. The answer is a few tens of micrometres, which is not very small at all: below that distance we do not know how gravity behaves, whereas at the LHC the other interactions are probed down to $10^{-18}\,$m. The reason is that when two bodies are pushed closer to each other the other interactions become more important, and it is hard to shield them.
+What this means depends on the masses of the moduli. If they are massless, they mediate modifications of gravity at very large distances. If they are massive, the force they mediate has a finite range, just as the weak interactions are felt only inside nuclei because the $W$ and $Z$ bosons are massive; then the modifications of gravity appear only at short distances. These new forces are called \emph{fifth forces}, and to avoid them a string compactification must give a mass to all the moduli, a mass big enough that the fifth forces have not been seen. However, in a naive compactification most of them, and at first glance all of them, are massless, and there is no source to give them a mass. This is true at tree level, so one has to include quantum corrections and see whether they develop a potential for the scalars that gives them a mass, big enough to avoid the fifth forces. This is the problem of \emph{moduli stabilisation}. Stabilisation refers to the fact that a massless field has no potential, or a flat potential, so one does not know where the field is: it can have very big quantum fluctuations and is not stabilised at any point. If instead a potential is generated, it has a minimum, at which the field is stabilised, on top of acquiring a mass.
+
+In summary, \emph{moduli are uncharged four-dimensional scalars with gravitational-strength interactions with ordinary matter, since they come from the metric, which at leading (tree-level) order in supergravity are massless.} Their potential is flat: the deformations of the size and of the shape of the extra dimensions cost no energy. This would be a phenomenological disaster, for two reasons.
+
+\subsection{Fifth forces}
+
+The first reason is the one just described: massless moduli would mediate Yukawa-like fifth forces, which are not observed. The four-dimensional Lagrangian contains, together with the mass term of a fermion $\psi$ of ordinary matter, such as the electron, an interaction of Yukawa type with a modulus,
+\begin{equation}
+  \mathcal L_4 \supset \frac{m_\psi}{\Mp}\,\phi\,\bar\psi\psi ,
+  \label{eq:L2-yukawa}
+\end{equation}
+where $\phi$ stands for any of the moduli, canonically normalised, and the coupling up to a coefficient of order one is shown. The suppression by the Planck mass is typical of gravitational interactions. Through this coupling the exchange of $\phi$ between two particles of ordinary matter, \cref{fig:L2-fifthforce}, gives a fifth force, with a vertex $m_\psi/\Mp$ at each end. The observational limit for moduli that couple to ordinary matter with strength $1/\Mp$ is that, to avoid these fifth forces, they must be heavier than about a meV:
+\begin{equation}
+  m_\phi \gtrsim 1\,\mathrm{meV} .
+  \label{eq:L2-bound}
+\end{equation}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics{fig_L2-fifthforce}
+  \caption{A modulus as the mediator of a fifth force. (a) Tree-level exchange of a modulus $\phi$ between two fermions, with the coupling of \cref{eq:L2-yukawa} at each vertex, on top of the exchange of a graviton. (b) The resulting potential between two masses relative to Newton's, \cref{eq:L2-yukawa-potential}, for a massless modulus and for two massive ones.}\label{fig:L2-fifthforce}
+\end{figure}
+
+\begin{addition}
+\emph{The Yukawa potential of a modulus.} Write the coupling as $\beta\,(m_\psi/\Mp)\,\phi\,\bar\psi\psi$ with $\beta$ of order one; in the non-relativistic limit $\bar\psi\psi$ is the number density of the particles, so a particle of mass $m_i$ is a source of $\phi$ with charge $g_i = \beta m_i/\Mp$. Exchange of a scalar of mass $m_\phi$ between two such sources gives the attractive potential $-\frac{g_1g_2}{4\pi}\frac{e^{-m_\phi r}}{r}$, which adds to the Newtonian one. Since $1/(4\pi\Mp^2) = 2G_N$,
+\begin{equation}
+  V(r) = -\frac{G_Nm_1m_2}{r}\Bigl(1 + \alpha_\phi\,e^{-r/\lambda_\phi}\Bigr) ,
+  \qquad
+  \alpha_\phi = 2\beta^2 ,\qquad \lambda_\phi = \frac{1}{m_\phi} .
+  \label{eq:L2-yukawa-potential}
+\end{equation}
+A massless modulus, $\lambda_\phi = \infty$, would simply rescale Newton's constant by $1+\alpha_\phi$, but differently for bodies of different composition as soon as $\beta$ is not universal, violating the equivalence principle, and it would change the bending of light, to which a scalar does not contribute: both are tested to high precision, which excludes it. A massive modulus modifies gravity only at $r\lesssim\lambda_\phi$, with $\lambda_\phi = 0.197\,\mathrm{mm}\times(1\,\mathrm{meV}/m_\phi)$. Torsion-balance experiments exclude $\alpha_\phi = 1$ for ranges above about $40\,\mu$m~\cite{EotWash}, i.e.\ they require $m_\phi\gtrsim5\,$meV for a coupling of gravitational strength; \cref{eq:L2-bound} is the round order of magnitude. Note also that the moduli couple to all massive particles, through the trace of their energy--momentum tensor, which is why the coupling in \cref{eq:L2-yukawa} is proportional to the mass $m_\psi$.
+\end{addition}
+
+\subsection{Lack of predictivity}
+
+The second reason may already be guessed. We have seen, in the previous lecture and in this one, that all the features of the effective theory in string theory are moduli-dependent. There are no parameters that one can fix by hand, except $\alpha'$, and once it is fixed (or traded for $\Mp$, \cref{eq:L1-MP-Ms}) everything else is derived dynamically, as the vacuum expectation value of a field. For example, the coupling $\alpha_{\mathrm{GUT}}$ of \cref{eq:L2-alphaGUT}, written in terms of the moduli with \cref{eq:L2-ReS}, is
+\begin{equation}
+  \alpha_{\mathrm{GUT}} \simeq \frac{g_s^2}{\Vol} = \frac{1}{\langle\Vol\rangle\,\langle\mathrm{Re}\,S\rangle^2} ,
+  \label{eq:L2-alphaGUT-moduli}
+\end{equation}
+where $\langle\Vol\rangle$ is the expectation value of the volume, one of the moduli. So this parameter is not chosen by hand: it is the vacuum expectation value of a combination of two moduli. The point is that if these moduli are massless, their potential is flat, as said above. Then one cannot tell what the values of the fields are, because any value is allowed, with huge quantum fluctuations, and one cannot predict $\alpha_{\mathrm{GUT}}$, since neither $\Vol$ nor $\mathrm{Re}\,S$ is known. The same holds for the scales of \cref{ch:L1}: the string scale, $\Ms\simeq g_s\Mp/\sqrt\Vol$ (\cref{eq:L1-MP-Ms}), and the Kaluza--Klein scale, $\MKK\simeq g_s\Mp/\Vol^{2/3}$ (\cref{eq:L1-MKK}), are different combinations of $g_s$ and $\Vol$. Without knowing them one knows neither $\Ms$, nor $\MKK$, nor $\alpha_{\mathrm{GUT}}$: one knows nothing.
+
+There is therefore a huge lack of predictivity, because all the features of the four-dimensional low-energy effective theory of string compactifications are functions of the moduli. By all the features we mean the gauge couplings, for example the Yang--Mills coupling, the Yukawa couplings, the mass spectrum of the theory, the string scale, the Kaluza--Klein scale, the scale of supersymmetry breaking, the cosmological constant, the scale of cosmic inflation, and even the gauge group of the effective theory: all are functions of the moduli. This is the beauty of string theory, in a sense, because these quantities can be predicted rather than chosen by hand; but with massless moduli nothing is predicted.
+
+\begin{addition}
+\emph{Flat directions and predictions.} With an exactly flat potential every value $\phi_0$ of a modulus defines a vacuum, and all these vacua have the same energy but different physics, different $\alpha_{\mathrm{GUT}}$, $\Ms$, $\MKK$ and so on. Nothing in the theory selects one of them, so choosing $\phi_0$ is the same as choosing a parameter by hand. In cosmology the situation is worse: a massless field is not held anywhere, its value today is set by initial conditions and by its evolution, and during inflation it fluctuates by $\delta\phi\sim H/2\pi$ per Hubble time, with $H$ the Hubble rate, so that its value need not even be the same in different regions of the universe. A potential with a minimum removes both problems: the field sits at the minimum, everything that depends on it becomes calculable, and the curvature of the potential there is the mass of the modulus, which must satisfy \cref{eq:L2-bound}.
+\end{addition}
+
+What is needed is \emph{moduli stabilisation}: the study of the quantum corrections to the scalar potential $V$ (not to be confused with the volume $\Vol$), which can develop a minimum, stabilise the moduli $\phi^I$ there, make them massive and fix the predictions,
+\begin{equation}
+  \frac{\partial V}{\partial\phi^I}\bigg|_{\langle\phi\rangle} = 0 ,\qquad
+  m^2_{IJ}\propto\frac{\partial^2V}{\partial\phi^I\partial\phi^J}\bigg|_{\langle\phi\rangle}\ \text{positive definite} ,
+  \label{eq:L2-stabilisation}
+\end{equation}
+with the mass matrix normalised by the kinetic terms of the moduli, and with masses large enough to satisfy \cref{eq:L2-bound}. These corrections will in the end generate minima, and then one can really tell where the moduli are. Next time we shall argue why moduli stabilisation is hard in the heterotic string. A hint can already be seen: we found in \cref{sec:L2-alphaGUT} that in the heterotic string it is hard to trust the effective theory, because the quantum corrections are hard to control, and yet the quantum corrections are exactly what is needed to stabilise the moduli.
