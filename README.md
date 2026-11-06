@@ -16,4 +16,4 @@ These are student notes, not an official text of the course: they have not been 
 latexmk -pdf main.tex
 ```
 
-The sources are `main.tex` (preamble and title page), `macros.tex`, `conventions.tex` and one file per lecture in `lectures/`; the figures are in `figures/`.
+The sources are `main.tex` (preamble and title page), `editors_note.tex` (the editor's note), `macros.tex`, `conventions.tex` and one file per lecture in `lectures/`; the figures are in `figures/`.
