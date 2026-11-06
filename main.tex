@@ -33,7 +33,9 @@
       colback=white, colframe=gray, boxrule=0.5pt,
       left=6pt, right=6pt, top=4pt, bottom=4pt, before skip=1.5ex, after skip=1.5ex,
       fontupper=\small,
-      before upper={\clubpenalties 3 10000 10000 0 \widowpenalties 3 10000 10000 0 }]%
+      before upper={\clubpenalties 3 10000 10000 0 \widowpenalties 3 10000 10000 0 },
+      overlay middle and last={\node[anchor=south east, font=\scriptsize\itshape,
+        text=gray, inner sep=2pt] at (frame.north east) {continued};}]%
    \noindent}%
   {\end{tcolorbox}}
 
