@@ -1,6 +1,6 @@
 # Introduction to String Theory, Part II: String compactifications
 
-Lecture notes for Prof. Michele Cicoli's module of *Introduction to String Theory* (University of Bologna, academic year 2026/27).
+Lecture notes for Module 1 of *Introduction to String Theory* (University of Bologna, academic year 2026/27).
 
 **[Read the notes (PDF)](main.pdf)**
 
