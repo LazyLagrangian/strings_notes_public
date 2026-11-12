@@ -43,10 +43,6 @@ The theory is consistent because two potential problems are absent. There are no
 \end{equation}
 String theory is the only theory we know that predicts the number of spacetime dimensions. The prediction is, at first sight, wrong, since we see four dimensions. But it is not so bad: the answer is a positive integer, and it could have been worse.
 
-\begin{addition}
-\emph{Where $D=10$ comes from.} In the covariant quantisation of the superstring the worldsheet theory contains, besides the $D$ bosons $X^M$ and their $D$ fermionic partners, the ghosts that come from fixing the worldsheet diffeomorphisms and local supersymmetry. Each field contributes to the central charge of the Virasoro algebra: $1$ for each boson, $\tfrac12$ for each Majorana fermion, $-26$ for the $bc$ ghosts and $+11$ for the $\beta\gamma$ superghosts. The Weyl anomaly is proportional to the total, $c_{\text{tot}} = \tfrac32 D - 15$, and vanishes only for $D=10$, i.e.\ for a ``matter'' theory of central charge $c = 15$. The same condition makes the BRST charge nilpotent, $Q_B^2 = 0$, which is what guarantees that the negative-norm states introduced by covariant quantisation decouple from the physical spectrum. For the bosonic string the same counting gives $D - 26 = 0$.
-\end{addition}
-
 \section{Compactification and the Kaluza--Klein scale}
 \label{sec:L1-KK}
 
@@ -73,10 +69,6 @@ The idea is easiest to picture in two dimensions. Take a spacetime that is a cyl
   \includegraphics{fig_L1-cylinder}
   \caption{A cylinder $\R\times S^1$ seen from close by and from far away: at distances much larger than its circumference, or energies much lower than $1/R$, it looks like a line. Every point of the line carries a small circle, as every point of $\R^{1,3}$ carries a copy of $Y_6$.}\label{fig:L1-cylinder}
 \end{figure}
-
-\begin{addition}
-\emph{The Kaluza--Klein tower.} The name of $\MKK$ comes from the tower of four-dimensional particles that a single higher-dimensional field gives, as met in the supersymmetry course. For a massless scalar $\Phi(x,y)$ on $\R^{1,3}\times S^1$, with $y\sim y+2\pi R$, the Fourier expansion $\Phi = \sum_{n\in\Z}\varphi_n(x)\,e^{iny/R}$ turns the five-dimensional wave equation into four-dimensional Klein--Gordon equations for the modes $\varphi_n$ with masses $m_n = |n|/R$. At energies $E\ll1/R$ only the zero mode $\varphi_0$ can be produced, and the theory looks four-dimensional. On a six-dimensional torus with six circles of radius $R$, $\mathrm{Vol}(Y_6) = (2\pi R)^6$ and the lightest massive modes have $m = 1/R = 2\pi/\mathrm{Vol}(Y_6)^{1/6}$. Thus \cref{eq:L1-MKK-def} fixes $\MKK$ only up to a factor of order one (here $2\pi$), and for a less symmetric $Y_6$ the precise spectrum depends on its shape, not only on its volume; what matters for us is the scaling with the volume.
-\end{addition}
 
 \section{The string scale and the Planck scale}
 \label{sec:L1-scales}
@@ -112,14 +104,6 @@ The action in \cref{eq:L1-S10} is the tree-level contribution. As usual, it rece
   \label{eq:L1-weak}
 \end{equation}
 
-\begin{addition}
-\emph{Why $e^{-2\phi}$, and the Einstein frame.} In string perturbation theory a closed-string amplitude on a worldsheet of genus $g$ (a sphere with $g$ handles) is weighted by $g_s^{2g-2} = g_s^{-\chi}$, where $\chi = 2-2g$ is the Euler characteristic. The tree-level action comes from the sphere, $\chi=2$, which is the origin of the factor $e^{-2\phi}$ in \cref{eq:L1-S10}; the one-loop terms (the torus, $\chi=0$) come without dilaton factor, and so on. The kinetic term of $G_{MN}$ is mixed with that of the dilaton through this factor. A Weyl rescaling $G_{MN} = e^{(\phi-\phi_0)/2}G^E_{MN}$, with $\phi_0 = \langle\phi\rangle$, removes it: in ten dimensions $\sqrt{-G}\,R_{10}[G] = e^{2(\phi-\phi_0)}\sqrt{-G_E}\,R_{10}[G_E] + (\text{derivatives of }\phi)$, so that the factor $e^{-2\phi}$ becomes the constant $e^{-2\phi_0} = g_s^{-2}$ and the action takes the Einstein--Hilbert form in the Einstein-frame metric $G^E_{MN}$. With this choice the two frames coincide in the vacuum. For completeness, the full bosonic action of the NS--NS fields in the string frame is
-\begin{equation*}
-  S_{\mathrm{NS}} = \frac{1}{2\kappa_{10}^2}\int\dd^{10}X\,\sqrt{-G}\;e^{-2\phi}\Bigl(R_{10} + 4\,\partial_M\phi\,\partial^M\phi - \frac{1}{2\cdot3!}H_{MNP}H^{MNP}\Bigr),
-\end{equation*}
-with $H = \dd B$ the field strength of the Kalb--Ramond field; the R--R fields and the fermions add further terms, which we shall meet in the following lectures.
-\end{addition}
-
 \subsection{Dimensional reduction and the Planck mass}
 
 We now perform the \emph{dimensional reduction} of \cref{eq:L1-S10} on the background of \cref{eq:L1-X10}, going to energies below the Kaluza--Klein scale. The ten-dimensional metric factorises into a four-dimensional piece and a six-dimensional one,
@@ -132,7 +116,7 @@ so that $\sqrt{-G} = \sqrt{-g_4}\,\sqrt{g_6}$ and $R_{10} = R_4 + R_6$. Keeping 
   S_{10} \supset 2\pi\Ms^8\underbrace{\int_{Y_6}\dd^6y\,\sqrt{g_6}}_{\mathrm{Vol}(Y_6)}\;\int\dd^4x\,\sqrt{-g_4}\;e^{-2\phi}\,R_4 .
   \label{eq:L1-reduction}
 \end{equation}
-There are other contributions, in particular the one with the internal Ricci scalar $R_6$, which we ignore for now (see the addition below).
+There are other contributions, in particular the one with the internal Ricci scalar $R_6$, which we ignore for now.
 In the vacuum the dilaton takes its expectation value and can be taken outside the integral:
 \begin{equation}
   S_{10} \supset \underbrace{2\pi\Ms^8\,\mathrm{Vol}(Y_6)\,e^{-2\langle\phi\rangle}}_{=\,\Mp^2/2}\int\dd^4x\,\sqrt{-g_4}\,R_4 .
@@ -147,19 +131,6 @@ This is the usual four-dimensional Einstein--Hilbert action, and its coefficient
 \end{equation}
 
 Since $\ls$ is the only parameter of string theory, \cref{eq:L1-MP-Ms} allows us to trade it for the Planck mass. Conceptually $\Ms$ is the fundamental scale and $\Mp$ a derived one, but $\Mp$ is the one we know, so in practice we fix $\Mp\simeq2.4\times10^{18}\GeV$ and derive everything else from it. The other two quantities in \cref{eq:L1-MP-Ms} are not parameters at all: $g_s$ is the expectation value of the dilaton, and we shall see that $\Vol$ is the expectation value of another field, the volume modulus. In the end everything is derived dynamically.
-
-\begin{addition}
-\emph{What was dropped, and the Einstein frame in four dimensions.} Three simplifications are hidden in \cref{eq:L1-reduction}. First, the product form of the metric, \cref{eq:L1-ansatz}, ignores the possibility that the size of $\R^{1,3}$ depends on the point of $Y_6$ (a warp factor), which will become important in flux compactifications. Second, the term $\int_{Y_6}\dd^6y\sqrt{g_6}\,R_6$, which we dropped, contributes to the four-dimensional scalar potential; it vanishes when $Y_6$ is Ricci-flat, as Calabi--Yau manifolds are (\cref{sec:L1-holonomy}). Third, we have set the dilaton and the volume to constants. If they are allowed to vary along $\R^{1,3}$, as the fields they are, the coefficient of $R_4$ in \cref{eq:L1-reduction} is $2\pi\Ms^2\,\Vol(x)\,e^{-2\phi(x)}$, which is not constant, and the four-dimensional action is not in the Einstein frame. A Weyl rescaling of the four-dimensional metric by $e^{-2\phi}\Vol$, relative to its vacuum value, brings it to that frame; it is the origin of the powers of $\Vol$ in the four-dimensional scalar potential that we shall meet later.
-
-\emph{The ten-dimensional Planck mass.} In the ten-dimensional Einstein frame the coefficient of the Einstein--Hilbert term defines a ten-dimensional Planck mass, $\frac{1}{2\kappa_{10}^2g_s^2} \equiv \frac12M_{10}^8$, i.e.
-\begin{equation}
-  M_{10}^8 = \frac{4\pi}{g_s^2}\,\Ms^8 ,\qquad
-  M_{10} = (4\pi)^{1/8}\,g_s^{-1/4}\,\Ms ,\qquad
-  \Mp^2 = M_{10}^8\,\mathrm{Vol}(Y_6) .
-  \label{eq:L1-M10}
-\end{equation}
-The last relation is the general statement that the four-dimensional strength of gravity is diluted by the volume of the extra dimensions. Above $\MKK$ gravity is ten-dimensional, and it is $M_{10}$, not $\Mp$, that sets the scale at which it becomes strong. For $g_s<1$ and $\Vol>1$ it lies between the two: $\Ms < M_{10} < \Mp$.
-\end{addition}
 
 \section{Perturbative control: string loops and \texorpdfstring{$\alpha'$}{alpha'} corrections}
 \label{sec:L1-control}
@@ -179,10 +150,6 @@ The limit of large volume is the limit in which $\alpha'$ is small compared with
 A string of fixed size moving in a volume that is huge compared with it is the same as a volume of fixed size in which the string length is sent to zero. But $\ls\to0$ is the limit in which strings become point-like particles, and in which the standard Feynman diagrams of quantum field theory are recovered from the string diagrams. Corrections in $1/\Vol$ are therefore genuinely \emph{stringy} corrections: they tell us that the fundamental objects are strings, not point-like particles.
 
 So the effective theory receives two kinds of corrections, controlled by two different expansion parameters. The first are \emph{string loops}, the sums over Riemann surfaces of higher genus, with expansion parameter $g_s$; in the point-particle limit they reduce to the loop diagrams of quantum field theory. The second, with expansion parameter $1/\Vol$, do not look like loop corrections from the point of view of the spacetime quantum field theory. They are tree-level corrections, but with higher derivatives, like the operators of dimension five, six, seven and higher that one generates at tree level in field theory by integrating out heavy particles; here the heavy modes that are integrated out are the massive string modes. They are called \emph{$\alpha'$ corrections}, and controlling them requires $1/\Vol\ll1$. From the point of view of spacetime they are higher-derivative corrections; from the point of view of the worldsheet theory they are \emph{worldsheet loops}, the loops of the two-dimensional field theory, which are counted by $\alpha'$. In the regime $g_s\ll1$, $\Vol\gg1$ one can trust the effective theory and neglect both string loops and higher-derivative corrections, at least to a first approximation.
-
-\begin{addition}
-\emph{The size of the $\alpha'$ corrections.} Each power of $\alpha'$ in the ten-dimensional effective action comes with two more derivatives. On $Y_6$, of typical length $L = \mathrm{Vol}(Y_6)^{1/6}$, two derivatives cost $1/L^2$, so each order is suppressed by $\alpha'/L^2 = 1/\bigl((2\pi)^2\Vol^{1/3}\bigr)$. In type II string theory supersymmetry forbids the corrections at orders $\alpha'$ and $\alpha'^2$, and the first correction to the gravitational action is a term of the form $\alpha'^3R^4$, quartic in the curvature. Relative to the tree-level term it is of order $\alpha'^3/L^6 = 1/\bigl((2\pi)^6\Vol\bigr)$, which is precisely the quantity of \cref{eq:L1-invV}. Its effect on the four-dimensional theory, computed by Becker, Becker, Haack and Louis~\cite{BBHL}, will be an essential ingredient of the Large Volume Scenario. Strictly speaking, control of the $\alpha'$ expansion requires all the curvature radii of $Y_6$ and the sizes of all of its cycles, not only its total volume, to be large in string units.
-\end{addition}
 
 \section{A hierarchy of scales and of effective theories}
 \label{sec:L1-hierarchy}
@@ -244,26 +211,7 @@ If instead of $T^6$ the space $Y_6$ is a \emph{Calabi--Yau manifold}, whose holo
 \end{equation}
 This is why Calabi--Yau manifolds, the six-dimensional manifolds of $SU(3)$ holonomy, became famous: they break the largest possible amount of supersymmetry while preserving some of it, which is what is needed to make contact with the real world.
 
-\begin{addition}
-\emph{Why the holonomy decides.} On $\R^{1,3}\times Y_6$ the ten-dimensional Lorentz group is broken to $SO(1,3)\times SO(6)$, and the Majorana--Weyl representation $\mathbf{16}$ of $SO(1,9)$ decomposes as
-\begin{equation}
-  \mathbf{16} = (\mathbf 2,\mathbf 4)\oplus(\bar{\mathbf 2},\bar{\mathbf 4}) ,
-  \label{eq:L1-spinor-decomp}
-\end{equation}
-where $\mathbf 2$ and $\bar{\mathbf 2}$ are the two Weyl spinors of $SO(1,3)$, and $\mathbf 4$ and $\bar{\mathbf 4}$ the two chiral spinors of $SO(6)$, the fundamental and antifundamental of $SU(4)\simeq\mathrm{Spin}(6)$. The Majorana condition relates the two terms, so a ten-dimensional supersymmetry parameter has the form $\epsilon(x,y) = \zeta(x)\otimes\eta(y) + \text{c.c.}$, with $\zeta$ a four-dimensional Weyl spinor and $\eta$ a spinor on $Y_6$. A supersymmetry is preserved by the background if the variations of the fermions vanish in it. With no fluxes and a constant dilaton the only condition comes from the gravitino, $\delta\psi_M = \nabla_M\epsilon = 0$, which requires $\eta$ to be covariantly constant on $Y_6$, $\nabla_m\eta = 0$. A covariantly constant spinor is unchanged by parallel transport around any loop, so it is a singlet of $\Hol(Y_6)$ acting on the $\mathbf 4$. Each such singlet $\eta$ gives one four-dimensional supersymmetry for each ten-dimensional Majorana--Weyl generator. For $T^6$ all four components are singlets, and type IIB gives $2\times4 = 8$ supersymmetries. For $\Hol = SU(3)\subset SU(4)$, $\mathbf 4\to\mathbf 3\oplus\mathbf 1$ has a single singlet, and type II gives $\mathcal N=2$; the heterotic and type I strings, which have a single Majorana--Weyl supersymmetry in ten dimensions, give $\mathcal N=1$ directly, which is how Calabi--Yau manifolds first entered string theory~\cite{CHSW} (\cref{sec:L2-heterotic}). An intermediate case is $\Hol = SU(2)$, e.g.\ $Y_6 = K3\times T^2$, with $\mathbf 4\to\mathbf 2\oplus\mathbf 1\oplus\mathbf 1$ and $\mathcal N=4$ from type II. Finally, a compact Kähler manifold of complex dimension three has $\Hol\subseteq U(3)$, and $\Hol\subseteq SU(3)$ is equivalent to Ricci-flatness; by Yau's theorem a Ricci-flat Kähler metric exists, in each Kähler class, precisely when the first Chern class vanishes. This is the usual definition of a Calabi--Yau manifold, and Ricci-flatness guarantees that the $R_6$ term dropped in \cref{eq:L1-reduction} vanishes.
-\end{addition}
-
 To reach four-dimensional $\mathcal N=1$ one more step is needed. Half of the degrees of freedom have to be projected away: one has to cut the spectrum. The operation that does it in type IIB is the \emph{orientifold projection}. It reverses the orientation of the strings and identifies different modes of the string with each other, and keeping only the combinations invariant under it projects out half of the spectrum, and with it half of the supersymmetries. Type IIB string theory on a Calabi--Yau orientifold gives four-dimensional $\mathcal N=1$ supergravity. We shall understand later in more detail what this operation means.
-
-\begin{addition}
-\emph{The orientifold projection.} Type IIB string theory is invariant under worldsheet parity $\Omega_p$, which reverses the orientation of the string and exchanges its left- and right-moving modes. Gauging this symmetry, i.e.\ keeping only the states invariant under it, gives type I string theory. In an orientifold, $\Omega_p$ is combined with an involution $\sigma$ of the compact space, $\sigma^2 = 1$, and the theory is restricted to the states invariant under the combination; the name joins ``orientation'' and ``orbifold''. For a Calabi--Yau manifold $\sigma$ is taken holomorphic and isometric, and two choices preserve four-dimensional $\mathcal N=1$~\cite{GrimmLouis}:
-\begin{equation*}
-  \mathcal O = (-1)^{F_L}\,\Omega_p\,\sigma^* \quad\text{with}\quad \sigma^*\Omega = -\Omega ,
-  \qquad\qquad
-  \mathcal O = \Omega_p\,\sigma^* \quad\text{with}\quad \sigma^*\Omega = +\Omega ,
-\end{equation*}
-where $\Omega$ is the holomorphic three-form of the Calabi--Yau and $(-1)^{F_L}$ the spacetime fermion number of the left-movers. The fixed loci of $\sigma$ are \emph{orientifold planes}: in the first case O3-planes, at points of $Y_6$, and O7-planes, wrapping four-cycles; in the second case O5- and O9-planes. Unlike D-branes, O-planes are not dynamical, and they carry negative tension and negative Ramond--Ramond charge. This will make them essential for the consistency (tadpole cancellation) of flux compactifications, and the O3/O7 case is the setting of the moduli-stabilisation scenarios studied later in the course.
-\end{addition}
 
 All these statements hold at the compactification scale. This scale, as we have seen, is not known, but it is expected to be very high, perhaps $10^{18}$, $10^{16}$ or $10^{15}\GeV$. At that scale, depending on the manifold on which the theory is compactified, one has four-dimensional $\mathcal N=8$, $\mathcal N=2$ for a Calabi--Yau, or $\mathcal N=1$ for a Calabi--Yau orientifold. The remaining task is then to break the last $\mathcal N=1$ to $\mathcal N=0$, at low energy, around the TeV scale, and dynamically.
 
@@ -293,10 +241,6 @@ Yes. The worldsheet conformal field theory describing the ``matter'' must have $
 \question{Is there a reason to believe that our universe is not in one of these limits?}
 
 Yes. In those limits there is no hierarchy. All scales are of order the string scale, and all couplings are of order one. To reproduce our universe one needs hierarchies: the string scale below the Planck scale, supersymmetry broken at a much lower scale, couplings that are small.
-
-\begin{addition}
-The counting behind $c=15$ is the one of the addition after \cref{eq:L1-D10}: the ghosts contribute $-26+11=-15$, so the rest of the worldsheet theory must contribute $+15$, with $\mathcal N=1$ worldsheet supersymmetry. In a compactification $\R^{1,3}\times Y_6$ the four flat directions contribute $\tfrac32\times4=6$, and the internal theory must have $c=9$. For a Calabi--Yau this is a supersymmetric sigma model on $Y_6$, but any conformal field theory with $c=9$ (and, for spacetime supersymmetry, $\mathcal N=2$ worldsheet supersymmetry) will do. A famous example is the Gepner model, built from $\mathcal N=2$ minimal models, which describes the quintic Calabi--Yau at a point of small volume where the geometric description has broken down.
-\end{addition}
 
 A remark of the lecturer's own belongs here. Everything said so far is put in by hand. We have assumed the background $\R^{1,3}\times Y_6$ and allowed deformations of $Y_6$: it can be a torus or a Calabi--Yau manifold, and we shall allow the Calabi--Yau to change in size, for example to have a different volume, or in shape. A change of shape at fixed size is like deforming a doughnut into a teacup: there is still one hole, one handle, and the volume may stay the same, but the shape changes. These deformations will be the moduli of the compactification (\cref{sec:L2-moduli}). It would be very nice to understand dynamically why we end up in this background rather than in something else, for example $\R^{1,4}\times Y_5$, but this is very hard, and we are not able to do it yet: it requires the whole non-perturbative M-theory, not perturbative string theory.
 
