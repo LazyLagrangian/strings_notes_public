@@ -1,0 +1,334 @@
+\chapter{D-branes, differential forms and electric--magnetic duality}
+\label{ch:L4}
+\lecturedate{Lecture of 13 November 2026}
+
+With this lecture we start writing type IIB string theory in equations. The first ingredient is the D-brane: what it is, why it made type II theories the natural arena for string phenomenology, and the effective action that describes it. That action is written in the language of differential forms, which are introduced next, operatively, and used to rewrite Maxwell's theory. In that language electric--magnetic duality becomes manifest, and with it the Dirac quantisation condition, which the next lecture generalises to branes.
+
+\section{Open strings and D-branes}
+\label{sec:L4-dbranes}
+
+As recalled in \cref{sec:L2-spectra}, type II compactifications became the main arena of string phenomenology after the discovery of D-branes around 1995: type II theories contain, besides closed strings, open strings whose endpoints lie on D-branes, and open strings can give fields in the adjoint representation of a non-abelian group, as gauge bosons are.
+
+D-branes also supply a missing piece in the interpretation of the R--R forms of \cref{tab:L2-spectra}, which are present only in type IIA and type IIB. These forms generalise the electromagnetic potential: they are gauge fields. Gauge fields alone, however, are not the whole story: the electromagnetic field is sourced by charged particles, and the consistent theory, quantum electrodynamics, contains both. The heterotic string has no R--R forms and the question does not arise; in type II theories the objects that source the R--R forms are the D-branes.
+
+\subsection{Neumann and Dirichlet boundary conditions}
+
+Let $X^M(\sigma,\tau)$ be the position in spacetime of the point $\sigma$ of an open string at worldsheet time $\tau$, with $\sigma\in[0,\ell]$. What happens at the endpoints is fixed by boundary conditions, and there are two possibilities. The first are \emph{Neumann} boundary conditions,
+\begin{equation}
+  \partial_\sigma X^a(\sigma,\tau)\big|_{\sigma=0,\ell} = 0 ,\qquad a = 0,\dots,p ,
+  \label{eq:L4-neumann}
+\end{equation}
+imposed here on $p+1$ of the coordinates, time included. They state that no momentum flows out of the string through its endpoints, which move freely, and in fact at the speed of light.
+This follows from one of the Virasoro constraints, which come from the equation of motion of the worldsheet metric,
+\begin{equation}
+  \partial_\tau X^M\partial_\tau X_M + \partial_\sigma X^M\partial_\sigma X_M = 0 .
+  \label{eq:L4-virasoro}
+\end{equation}
+If all the coordinates obey Neumann conditions, the second term vanishes at the endpoints, so that there $\partial_\tau X^M\partial_\tau X_M = 0$. Choosing the worldsheet time to be the time of spacetime, $\tau = t$, and writing $X^M = (t,\vec x)$, this is
+\begin{equation}
+  \partial_\tau X^M\partial_\tau X_M = -1 + |\dot{\vec x}|^2 = 0
+  \qquad\Longrightarrow\qquad |\dot{\vec x}| = 1
+  \qquad\text{at } \sigma = 0,\ell ,
+  \label{eq:L4-speed}
+\end{equation}
+so the endpoints move at the speed of light.
+
+The second possibility are \emph{Dirichlet} boundary conditions, which fix the position of the endpoints in the remaining directions,
+\begin{equation}
+  X^i(\sigma,\tau)\big|_{\sigma=0,\ell} = X^i_0 ,\qquad i = p+1,\dots,9 .
+  \label{eq:L4-dirichlet}
+\end{equation}
+The endpoints are then fixed in $9-p$ space directions.
+Picture an open string whose endpoints must stay on the blackboard: they cannot leave it in the orthogonal direction, where they obey Dirichlet conditions, but move along it, at the speed of light, where they obey Neumann conditions. Mixed boundary conditions of this kind, Neumann in some directions and Dirichlet in the others, define a hyperplane, $X^i = X^i_0$, on which the open strings end.
+
+This hyperplane is a \emph{D$p$-brane}, D for Dirichlet: a $(p+1)$-dimensional object, counting time. It is not a surface put in by hand but a dynamical object, which moves and fluctuates, and whose excitations are the open strings attached to it. We shall see in \cref{sec:L4-action} that D-branes are non-perturbative states of the theory, which appear once non-perturbative physics is taken into account and can then be present in the background.
+
+A D0-brane, with $p=0$, is a particle, one-dimensional in the sense that its worldline is. A D1-brane is a string-like object, with a two-dimensional worldvolume, to which open strings can be attached, as in \cref{fig:L4-dbranes}(a). A D2-brane is a plane in space, with a three-dimensional worldvolume: the open strings attached to it have Neumann conditions in the two space directions along the plane, in which they move at the speed of light, and Dirichlet conditions in the remaining $10-(2+1) = 7$ directions (\cref{fig:L4-dbranes}(b)).
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics{fig_L4-dbranes}
+  \caption{Open strings on D-branes. (a)~A D1-brane, a string-like object, with an open string attached by both endpoints and one attached by a single endpoint; a closed string, such as a mode of the R--R forms, moves in the bulk. (b)~A D2-brane, a plane in space: the open-string endpoints obey Neumann conditions along the plane and Dirichlet conditions in the seven transverse directions.}\label{fig:L4-dbranes}
+\end{figure}
+
+\subsection{D-branes as sources of the R--R forms}
+
+The analogy with electromagnetism now becomes precise. A D0-brane is a particle, and a charged particle is the source of an electromagnetic field, described by a potential $A_\mu$ with one index and a field strength with two, $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$. An object extended in one direction is naturally the source of a potential with two indices, with a field strength with three, and so on: a D$p$-brane, whose worldvolume has $p+1$ dimensions, sources a potential with $p+1$ indices, $C_{p+1}$, with field strength $F_{p+2}$. These potentials are the R--R forms of the massless spectrum, closed-string fields that propagate in the bulk of spacetime (\cref{fig:L4-dbranes}(a)).
+
+\section{Gauge theories on D-branes}
+\label{sec:L4-gauge}
+
+The open strings, unlike the closed ones, live on the branes, and they give gauge theories. A single D$p$-brane carries a $U(1)$ \emph{vector multiplet}, in the sense of supersymmetry: among the massless modes of the open strings on it there is a $U(1)$ gauge field $A_a(\xi)$ that lives on the worldvolume, with field strength $F_{ab} = \partial_aA_b - \partial_bA_a$, together with the other fields of the multiplet.
+
+A stack of $N$ D$p$-branes, all on top of each other at the same point of the transverse space, carries a vector multiplet in the adjoint representation of $U(N)$.
+To see why, label the branes $1,\dots,N$, as in \cref{fig:L4-stack}. An open string can start on any brane $i$ and end on any brane $j$: there are strings from $1$ to $1$, from $1$ to $2$, from $1$ to $3$, from $2$ to $2$, and so on, $N^2$ possibilities in all. The corresponding modes form an $N\times N$ matrix,
+\begin{equation}
+  \Phi = \begin{pmatrix}
+    \Phi_{11} & \Phi_{12} & \cdots & \Phi_{1N} \\
+    \Phi_{21} & \Phi_{22} & \cdots & \Phi_{2N} \\
+    \vdots & & \ddots & \vdots \\
+    \Phi_{N1} & \cdots & & \Phi_{NN}
+  \end{pmatrix} ,
+  \label{eq:L4-CP}
+\end{equation}
+whose labels $i,j$ are called Chan--Paton indices. The branes of the stack are identical, so the labelling is arbitrary: it can be changed by a unitary transformation, under which
+\begin{equation}
+  \Phi\longrightarrow\Phi' = U^{-1}\,\Phi\,U ,\qquad U\in U(N) ,
+  \label{eq:L4-adjoint}
+\end{equation}
+which is how a field in the adjoint representation transforms. The massless vectors among these modes are the $N^2$ gauge bosons of $U(N)$.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics{fig_L4-stack}
+  \caption{A stack of $N$ coincident D-branes, drawn slightly apart. An open string from brane $i$ to brane $j$ gives the entry $\Phi_{ij}$ of the $N\times N$ matrix \cref{eq:L4-CP}, which transforms in the adjoint of $U(N)$.}\label{fig:L4-stack}
+\end{figure}
+
+\subsection{The Standard Model on intersecting branes}
+
+The adjoint of $U(N)$ is exactly what a Yang--Mills theory needs, so D-branes can reproduce the gauge interactions of the Standard Model with Yang--Mills theories on their worldvolumes, as sketched in \cref{fig:L4-intersecting}. Take a stack of three branes, whose $U(3)$ contains the colour group $SU(3)$; a stack of two, whose $U(2)$ contains the weak $SU(2)_L$; and a single brane, with its $U(1)$, which plays the role of hypercharge. Open strings with both endpoints on the first stack are the gluons, those on the second stack the $SU(2)_L$ gauge bosons, and those on the single brane the hypercharge gauge boson. The $W^\pm$, the $Z$ and the photon then arise, as usual, from $SU(2)_L\times U(1)_Y$ after electroweak symmetry breaking.
+
+An open string can also stretch from one stack to another. A string from the $SU(3)$ stack to the $SU(2)$ stack is charged under both groups, in the bifundamental representation $(\mathbf 3,\mathbf 2)$: it feels the strong interactions, so it is a quark, and it is a doublet of $SU(2)_L$, so it is left-handed. It can be the left-handed quark doublet $Q_L$. A string from the $SU(2)$ stack to the single brane feels $SU(2)_L$ and hypercharge but not colour: it can be the left-handed lepton doublet $L_L$. This is only a sketch, but it shows how open strings on D-branes can give something that looks like the Standard Model.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics{fig_L4-intersecting}
+  \caption{A cartoon of the Standard Model on intersecting D-branes: a stack of three branes ($U(3)\supset SU(3)$, gluons), a stack of two ($U(2)\supset SU(2)_L$, weak bosons) and a single brane ($U(1)$, hypercharge). Strings stretched between two stacks give fields in bifundamental representations: the quark doublet $Q_L$ in $(\mathbf 3,\mathbf 2)$ and the lepton doublet $L_L$.}\label{fig:L4-intersecting}
+\end{figure}
+
+\section{The D-brane effective action}
+\label{sec:L4-action}
+
+The effective theory contains two kinds of fields. The closed strings move everywhere in spacetime, and their dynamics is described by the bulk action, studied later; the open strings are stuck on the branes, and their dynamics is described by an action localised on the brane worldvolume, with three pieces,
+\begin{equation}
+  S_{\text{loc}} = S_{\text{DBI}} + S_{\text{CS}} + S_{\text{ferm}} .
+  \label{eq:L4-Sloc}
+\end{equation}
+The Dirac--Born--Infeld (DBI) action $S_{\text{DBI}}$ describes the mass of the brane and the kinetic terms of the fields on it; the Chern--Simons (CS) action $S_{\text{CS}}$ describes its coupling to the R--R forms. The theory is supersymmetric, so the action also contains the fermions, in $S_{\text{ferm}}$; we keep only the bosonic part, for a single brane rather than a stack.
+
+\subsection{The Dirac--Born--Infeld action}
+
+The DBI action is a generalisation of the Nambu--Goto action. The Nambu--Goto action of a string is proportional to the area of its worldsheet, and the action of a relativistic particle to the length of its worldline; the DBI action is, in the simplest case, proportional to the volume of the worldvolume of the brane. In general it reads
+\begin{equation}
+  S_{\text{DBI}} = -T_p\int_{W_{p+1}}\dd^{p+1}\xi\;e^{-\phi}\sqrt{-\det\bigl(g_{ab} + B_{ab} + 2\pi\alpha'F_{ab}\bigr)} .
+  \label{eq:L4-DBI}
+\end{equation}
+Here $W_{p+1}$ is the $(p+1)$-dimensional worldvolume of the D$p$-brane, with coordinates $\xi^a$, $a = 0,\dots,p$. It is embedded in spacetime: the point $\xi$ of the worldvolume sits at the point $X^M = Y^M(\xi)$ of spacetime. The constant $T_p$ is the \emph{tension} of the brane,
+\begin{equation}
+  T_p = \frac{1}{(2\pi)^p\,\alpha'^{(p+1)/2}} = 2\pi\,\Ms^{p+1} ,
+  \label{eq:L4-Tp}
+\end{equation}
+where the second form follows from $\Ms = 1/2\pi\sqrt{\alpha'}$ (\cref{eq:L1-Ms-def}). The dimensions are right: the action is dimensionless and the integral has dimensions of a length to the power $p+1$, so $T_p$ must be a mass to the power $p+1$, and the only scale available is $\Ms$. The field $\phi$ is the dilaton, and the action is written in the string frame.
+
+The fields in the square root are of two kinds. $F_{ab} = \partial_aA_b - \partial_bA_a$ is the field strength of the $U(1)$ gauge boson that lives on the brane, an open-string field defined only on the worldvolume. The metric and the Kalb--Ramond field, instead, are closed-string fields, defined in the bulk of spacetime, and what enters \cref{eq:L4-DBI} are their \emph{pullbacks} to the worldvolume:
+\begin{equation}
+  g_{ab}(\xi) = G_{MN}\bigl(Y(\xi)\bigr)\,\partial_aY^M\,\partial_bY^N ,\qquad
+  B_{ab}(\xi) = B_{MN}\bigl(Y(\xi)\bigr)\,\partial_aY^M\,\partial_bY^N ,
+  \label{eq:L4-pullback}
+\end{equation}
+with $\partial_a = \partial/\partial\xi^a$: each field is evaluated where the brane is, which makes it a function of $\xi$, and its indices are converted into worldvolume indices with the derivatives of the embedding. For the metric this is the familiar induced metric, since the line element between two nearby points of the worldvolume is
+\begin{equation}
+  \dd s^2 = G_{MN}\,\dd Y^M\dd Y^N = \underbrace{G_{MN}\,\partial_aY^M\partial_bY^N}_{g_{ab}}\,\dd\xi^a\dd\xi^b .
+  \label{eq:L4-induced}
+\end{equation}
+
+\subsection{D-branes are non-perturbative}
+
+In a vacuum the dilaton takes its expectation value, and the factor $e^{-\phi}$ in \cref{eq:L4-DBI} becomes $e^{-\phi_0} = 1/g_s$ (\cref{eq:L1-gs}). The physical tension of the brane, its mass per unit volume, is therefore
+\begin{equation}
+  T_p^{\text{phys}} = T_p\,e^{-\phi_0} = \frac{T_p}{g_s} = \frac{2\pi\Ms^{p+1}}{g_s} .
+  \label{eq:L4-Tphys}
+\end{equation}
+In the limit of weak coupling, $g_s\to0$, in which perturbation theory holds (\cref{eq:L1-weak}), the tension diverges: the branes become infinitely massive and decouple. They become important as $g_s$ grows, and light at strong coupling. D-branes are therefore non-perturbative objects, invisible in perturbation theory, which is why they were found only in the mid-1990s. Once non-perturbative effects are included, the theory turns out to contain them, and it needs them, since they are the sources of the R--R fields, as the Chern--Simons action shows.
+
+\subsection{The Chern--Simons action}
+
+The coupling of the brane to the R--R forms is
+\begin{equation}
+  S_{\text{CS}} = T_p\int_{W_{p+1}}C_{p+1} .
+  \label{eq:L4-CS}
+\end{equation}
+The same constant $T_p$ appears again, and the case $p=0$ shows what it means. For a particle, \cref{eq:L4-CS} is the integral over the worldline of a one-form $C_1$, like the coupling $q\int A_\mu\,\dd x^\mu = q\int A_1$ of a charged particle to the electromagnetic potential, whose coefficient is the charge. So $T_p$ is not only the tension of the brane, which sets its mass, but also its charge under $C_{p+1}$. D-branes are particular states whose charge is equal to their mass, in appropriate units: they are \emph{BPS states}.
+
+For our purposes the R--R form $C_{p+1}$ is just an abelian gauge potential with $p+1$ indices, with the gauge transformation
+\begin{equation}
+  C_{p+1}\longrightarrow C_{p+1}' = C_{p+1} + \dd\Lambda_p ,
+  \label{eq:L4-gauge-C}
+\end{equation}
+which generalises $A_\mu\to A_\mu + \partial_\mu\alpha$, i.e.\ $A_1\to A_1 + \dd\Lambda_0$, with $\Lambda_0 = \alpha$; the exterior derivative $\dd$ is defined in \cref{sec:L4-forms}. Since $C_{p+1}$ is a closed-string field, living in the bulk, \cref{eq:L4-CS} again involves its pullback to the worldvolume,
+\begin{equation}
+  C_{a_1\cdots a_{p+1}}(\xi) = C_{M_1\cdots M_{p+1}}\bigl(Y(\xi)\bigr)\,\partial_{a_1}Y^{M_1}\cdots\partial_{a_{p+1}}Y^{M_{p+1}} .
+  \label{eq:L4-pullback-C}
+\end{equation}
+The integral of a $(p+1)$-form over a $(p+1)$-dimensional worldvolume, and why it needs no measure $\dd^{p+1}\xi$, is explained in the next section.
+
+\section{Differential forms}
+\label{sec:L4-forms}
+
+The Chern--Simons action is the integral of a differential form, and from now on the language of forms is used throughout. We introduce it operatively, without mathematical rigour.
+
+A differential $p$-form is an antisymmetric tensor with $p$ indices. On a $D$-dimensional manifold $X$ with coordinates $x^M$ it is written
+\begin{equation}
+  C_p = \frac{1}{p!}\,C_{M_1\cdots M_p}(x)\,\dd x^{M_1}\wedge\dots\wedge\dd x^{M_p} ,
+  \label{eq:L4-form}
+\end{equation}
+where $\wedge$ is the \emph{wedge product}, the antisymmetric part of the tensor product,
+\begin{equation}
+  \dd x^{M_1}\wedge\dots\wedge\dd x^{M_p} = p!\;\dd x^{[M_1}\otimes\dots\otimes\dd x^{M_p]} ,
+  \qquad\text{e.g.}\qquad
+  \dd x\wedge\dd y = \dd x\otimes\dd y - \dd y\otimes\dd x ,
+  \label{eq:L4-wedge}
+\end{equation}
+with the antisymmetrisation of the conventions.
+The products $\dd x^{M_1}\wedge\dots\wedge\dd x^{M_p}$ with $M_1<\dots<M_p$ form a basis of the $p$-forms, and the components $C_{M_1\cdots M_p}$ are the coefficients of the expansion in this basis. In four dimensions, for instance, the two-forms have the basis $\dd x^1\wedge\dd x^2$, $\dd x^1\wedge\dd x^3$, \dots, with $\binom42 = 6$ elements, each of which can be seen as an antisymmetric $4\times4$ matrix with $+1$ in one entry above the diagonal, $-1$ in the transposed entry and zeros elsewhere.
+
+\subsection{Three ways of looking at \texorpdfstring{$\dd x\wedge\dd y$}{dx\textwedge dy}}
+
+Three meanings of an object such as $\dd x\wedge\dd y$ are useful.
+
+\emph{(1) Algebraically, as an antisymmetric tensor.} Represent $\dd x$ and $\dd y$ by the basis vectors $(1,0)^T$ and $(0,1)^T$. Then
+\begin{equation}
+  \dd x\wedge\dd y = \begin{pmatrix}1\\0\end{pmatrix}\begin{pmatrix}0&1\end{pmatrix} - \begin{pmatrix}0\\1\end{pmatrix}\begin{pmatrix}1&0\end{pmatrix}
+  = \begin{pmatrix}0&1\\-1&0\end{pmatrix} .
+  \label{eq:L4-matrix}
+\end{equation}
+As a tensor with two lower indices it acts on two vectors $\vec a$ and $\vec b$ and gives a number,
+\begin{equation}
+  (\dd x\wedge\dd y)(\vec a,\vec b) = \begin{pmatrix}a_x&a_y\end{pmatrix}\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}b_x\\b_y\end{pmatrix}
+  = a_xb_y - a_yb_x = \det\bigl(\vec a,\vec b\bigr) ,
+  \label{eq:L4-det}
+\end{equation}
+the determinant of the matrix whose columns are $\vec a$ and $\vec b$.
+
+\emph{(2) Geometrically, as an oriented infinitesimal parallelogram,} the one spanned by $\dd x$ and $\dd y$ (\cref{fig:L4-wedge}(a)). The orientation matters: $\dd y\wedge\dd x = -\dd x\wedge\dd y$ is the same parallelogram with the opposite orientation. Two vectors, identified with the one-forms $\vec a = a_x\dd x + a_y\dd y$ and $\vec b = b_x\dd x + b_y\dd y$, span a parallelogram given by
+\begin{equation}
+  \vec a\wedge\vec b = (a_xb_y - a_yb_x)\,\dd x\wedge\dd y ,
+  \label{eq:L4-parallelogram}
+\end{equation}
+since $\dd x\wedge\dd x = \dd y\wedge\dd y = 0$ by antisymmetry. The coefficient is the oriented area of the parallelogram (\cref{fig:L4-wedge}(b)), the same determinant as in \cref{eq:L4-det}.
+
+\emph{(3) As an oriented volume element,} which fixes the measure of an integral. This is the meaning that matters for actions such as \cref{eq:L4-CS}, obtained by integrating forms. A two-form in two dimensions, with coordinates $(x^1,x^2) = (x,y)$, is
+\begin{equation*}
+  C_2 = \frac12\,C_{MN}\,\dd x^M\wedge\dd x^N = \frac12\bigl(C_{12}\,\dd x\wedge\dd y + C_{21}\,\dd y\wedge\dd x\bigr) = C_{12}\,\dd x\wedge\dd y ,
+\end{equation*}
+since both terms are equal, and $\dd x\wedge\dd y$ is read as the measure $\dd x\,\dd y$, keeping track of the orientation. A two-form is therefore integrated over a two-dimensional surface $\Sigma_2$ (a sphere, or any other), and
+\begin{equation}
+  \int_{\Sigma_2}C_2 = \int_{\Sigma_2}C_{12}(x,y)\,\dd x\,\dd y
+  \label{eq:L4-integral}
+\end{equation}
+for coordinates $(x,y)$ of positive orientation on $\Sigma_2$. In the same way, in terms of the pulled-back components \cref{eq:L4-pullback-C}, the Chern--Simons action \cref{eq:L4-CS} is $T_p$ times the integral of $C_{01\cdots p}(\xi)$ over $\dd^{p+1}\xi$.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics{fig_L4-wedge}
+  \caption{The two-form $\dd x\wedge\dd y$ as an oriented infinitesimal parallelogram. (a)~The parallelogram spanned by $\dd x$ and $\dd y$, with its orientation. (b)~Two vectors $\vec a$ and $\vec b$ span a parallelogram whose oriented area is $a_xb_y - a_yb_x$, \cref{eq:L4-parallelogram}; exchanging them reverses the orientation and the sign.}\label{fig:L4-wedge}
+\end{figure}
+
+\subsection{Exterior derivative and Hodge star}
+
+The \emph{exterior derivative} maps a $p$-form into a $(p+1)$-form,
+\begin{equation}
+  \dd C_p = \frac{1}{p!}\,\partial_{M_0}C_{M_1\cdots M_p}(x)\;\dd x^{M_0}\wedge\dd x^{M_1}\wedge\dots\wedge\dd x^{M_p} :
+  \label{eq:L4-d}
+\end{equation}
+the derivative brings one more index, and the result is expanded in the basis of $(p+1)$-forms. Applying it twice gives zero,
+\begin{equation}
+  \dd^2 = 0 ,
+  \label{eq:L4-d2}
+\end{equation}
+because $\dd^2C_p$ contains $\partial_{N}\partial_{M_0}C_{M_1\cdots M_p}$, which is symmetric under the exchange of $N$ and $M_0$, contracted with $\dd x^N\wedge\dd x^{M_0}$, which is antisymmetric.
+
+The other basic operation is \emph{Hodge duality}, a map $\star$ from $p$-forms to $(D-p)$-forms on a $D$-dimensional manifold with metric $g_{MN}$. On a basis element it is
+\begin{multline}
+  \star\bigl(\dd x^{M_1}\wedge\dots\wedge\dd x^{M_p}\bigr)\\
+  = \frac{1}{(D-p)!}\,\sqrt{|g|}\;g^{M_1N_1}\cdots g^{M_pN_p}\,\varepsilon_{N_1\cdots N_pN_{p+1}\cdots N_D}\;\dd x^{N_{p+1}}\wedge\dots\wedge\dd x^{N_D} ,
+  \label{eq:L4-hodge}
+\end{multline}
+and it acts on a general $p$-form through its basis elements. The second indices of the $p$ inverse metrics are contracted with the first $p$ indices of the Levi-Civita symbol $\varepsilon$, and its remaining $D-p$ indices with the new basis elements; the sign of $\varepsilon$ and the meaning of $\sqrt{|g|}$ are fixed in the conventions.
+
+With the Hodge star one defines an inner product of two $p$-forms $A_p$ and $B_p$, by integrating over $X$ the $D$-form $A_p\wedge\star B_p$:
+\begin{equation}
+  (A_p,B_p) = \int_X A_p\wedge\star B_p = \frac{1}{p!}\int_X\dd^Dx\,\sqrt{|g|}\;A_{M_1\cdots M_p}B^{M_1\cdots M_p} .
+  \label{eq:L4-inner}
+\end{equation}
+The second form follows by substituting the definitions and contracting the Levi-Civita symbols. The inner product is symmetric, and positive definite when the metric is Riemannian, as on the compact space $Y_6$. For a Lorentzian metric the components with a time index contribute with the opposite sign, and the product is indefinite.
+
+\section{Maxwell's theory in the language of forms}
+\label{sec:L4-maxwell}
+
+In this language electromagnetism is written very compactly. The potential is the one-form $A_1 = A_\mu\,\dd x^\mu$, and its field strength the two-form
+\begin{equation*}
+  F_2 = \dd A_1 = \frac12\,F_{\mu\nu}\,\dd x^\mu\wedge\dd x^\nu ,\qquad F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu .
+\end{equation*}
+In four dimensions the Hodge dual of a two-form is again a two-form, so $F_2\wedge\star F_2$ is a four-form, which can be integrated over spacetime. Coupled to a current, written as the one-form $J = J_\mu\,\dd x^\mu$, the action is
+\begin{equation}
+  S = -\frac12\int F_2\wedge\star F_2 + \int A_1\wedge\star J
+  = \int\dd^4x\,\sqrt{-g}\,\Bigl(-\frac14F_{\mu\nu}F^{\mu\nu} + A_\mu J^\mu\Bigr) ,
+  \label{eq:L4-maxwell}
+\end{equation}
+where the second form follows from \cref{eq:L4-inner}: the Maxwell action is $-\frac12$ times the norm of $F_2$. Maxwell's equations with sources are
+\begin{equation}
+  -\partial_\mu F^{\mu\nu} = J^\nu
+  \qquad\Longleftrightarrow\qquad
+  \dd{\hodge F_2} = \star J ,
+  \label{eq:L4-maxwell-eq}
+\end{equation}
+an equality between three-forms: starting from $F_2$, the star gives a two-form and $\dd$ a three-form, while the star of the one-form $J$ is a three-form.
+
+The other two Maxwell equations are the \emph{Bianchi identity},
+\begin{equation}
+  \partial_{[\mu}F_{\rho\sigma]} = 0
+  \qquad\Longleftrightarrow\qquad
+  \partial_\mu(\star F)^{\mu\nu} = 0
+  \qquad\Longleftrightarrow\qquad
+  \dd F_2 = 0 ,
+  \label{eq:L4-bianchi}
+\end{equation}
+with $(\star F)_{\mu\nu} = \frac12\sqrt{-g}\,\varepsilon_{\mu\nu\rho\sigma}F^{\rho\sigma}$ the components of $\star F_2$ (the middle form is specific to four dimensions, where $\star F_2$ is a two-form). In the language of forms it is satisfied automatically: if $F_2 = \dd A_1$, then $\dd F_2 = \dd^2A_1 = 0$ by \cref{eq:L4-d2}. Conversely, $\dd F_2 = 0$ implies that, at least locally, $F_2$ can be written as $\dd A_1$, i.e.\ $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$.
+
+\section{Electric--magnetic duality and the Dirac quantisation condition}
+\label{sec:L4-duality}
+
+To get to branes one more connection is needed. In the absence of sources Maxwell's equations are
+\begin{equation}
+  \dd{\hodge F_2} = 0 = \dd F_2 ,
+  \label{eq:L4-free}
+\end{equation}
+and they are invariant under the exchange of $F_2$ with its Hodge dual, $F_2\to\star F_2$ (then $\star F_2\to\star\star F_2 = -F_2$, which is equally closed). In terms of the electric and magnetic fields, this exchanges the two:
+\begin{equation}
+  F_2\longrightarrow\star F_2
+  \qquad\Longleftrightarrow\qquad
+  (\vec E,\vec B)\longrightarrow(-\vec B,\vec E) .
+  \label{eq:L4-EB}
+\end{equation}
+Since the equations of motion are unchanged, the theory looks the same after the exchange: this is \emph{electric--magnetic duality}.
+
+With sources the symmetry is lost: the current $\star J$ appears in one equation and not in the other, because there are electrically charged particles but no magnetically charged ones, or at least none has been seen so far, perhaps because they are too heavy to have been produced. The duality survives if one introduces magnetic charges, \emph{magnetic monopoles}, besides the electric ones. The reason for insisting on this is that branes, as we shall see, always come with both electric and magnetic charges. Let
+\begin{equation*}
+  J^\mu = (\rho_e,\vec J) ,\qquad K^\mu = (\rho_m,\vec K)
+\end{equation*}
+be the electric and magnetic four-currents, with charge densities $\rho_e$, $\rho_m$ and three-currents $\vec J$, $\vec K$. Maxwell's equations become
+\begin{equation}
+  -\partial_\mu F^{\mu\nu} = J^\nu ,\quad \partial_\mu(\star F)^{\mu\nu} = K^\nu
+  \qquad\Longleftrightarrow\qquad
+  \dd{\hodge F_2} = \star J ,\quad \dd F_2 = \star K ,
+  \label{eq:L4-maxwell-sources}
+\end{equation}
+with $K = K_\mu\,\dd x^\mu$, so that $\nabla\cdot\vec B = \rho_m$, and now the theory looks symmetric. Indeed, the transformation
+\begin{equation}
+  \bigl(F_2,\ \star F_2\bigr)\longrightarrow\bigl(\star F_2,\ -F_2\bigr) ,\qquad
+  \bigl(J,\ K\bigr)\longrightarrow\bigl(-K,\ J\bigr)
+  \label{eq:L4-duality}
+\end{equation}
+maps the two equations into each other: the first becomes $\dd(-F_2) = -\star K$, which is the second, and the second becomes $\dd\hodge F_2 = \star J$, which is the first. Exchanging the fields and the two kinds of charged particles maps the theory into one that looks exactly the same: it is the same theory, seen from a different point of view.
+
+\subsection{The Dirac quantisation condition}
+
+Why are electric charges quantised? All the charges seen in nature are integer multiples of a basic unit: if the electron has charge $-1$ in units of $e$, the quarks have charges $\frac23$ and $-\frac13$, fractional but still multiples of $\frac13$. We do not know the reason, but magnetic monopoles, if they exist, would explain it. The argument is quantum mechanical. Consider a particle of electric charge $q_e$ moving around a monopole of magnetic charge $q_m$. Going around a closed loop its wave function picks up a phase, which must be trivial for the wave function to be single-valued. This requires the \emph{Dirac quantisation condition}
+\begin{equation}
+  q_e\,q_m = 2\pi n ,\qquad n\in\Z
+  \label{eq:L4-dirac}
+\end{equation}
+(in the units of the conventions, $\hbar = 1$ and Heaviside--Lorentz charges): the product of the electric and the magnetic charge is an integer multiple of $2\pi$~\cite{Dirac}. It explains charge quantisation: in the presence of a monopole of charge $q_m$, every electric charge must be an integer multiple of $2\pi/q_m$. That charges are quantised in nature is therefore a strong hint that monopoles exist.
+
+The same condition suggests why monopoles are so hard to detect. At fixed $n$ the magnetic charge is inversely proportional to the electric one, $q_m = 2\pi n/q_e$, so if the electric charge is small the magnetic charge is large: if one kind of object is weakly coupled, the other is strongly coupled. Electric--magnetic duality, \cref{eq:L4-duality}, is therefore a duality between weak and strong coupling, the prototype of the S-duality of \cref{sec:L2-dualities}. The next lecture generalises these ideas to branes.
